@@ -1,3 +1,5 @@
+import { Waitlist } from "@/components/Home/Waitlist";
+
 export default function Home() {
   return (
     <main>
@@ -13,15 +15,14 @@ export default function Home() {
             </h3>
           </div>
 
-          <p className=" md:max-w-xl text-pretty mx-auto mb-12">
+          <p className=" md:max-w-2xl text-pretty mx-auto mb-12">
             Create beautiful presentations, pitch decks, resumes, websites, and
-            documents. No design, writing, or coding skills required. <br />
+            documents. <br /> No design, writing, or coding skills needed.{" "}
+            <br />
             Bring your ideas to life like never before.
           </p>
 
-          <button className="bg-gradient-to-r from-deepTeal to-skyAqua hover:via-skyAqua hover:to-skyBlue text-white font-bold p-4 rounded-lg">
-            Join our waitlist
-          </button>
+          <Waitlist />
         </div>
       </section>
     </main>
