@@ -4,7 +4,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { useState } from "react";
 
 export function Waitlist() {
-  const [state, handleSubmit] = useForm("xldrqnpr");
+  const [state, handleSubmit] = useForm("xkgwdbqz");
   const [email, setEmail] = useState("");
 
   if (state.succeeded) {
