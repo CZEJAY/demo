@@ -20,10 +20,6 @@ export function Waitlist() {
       onSubmit={handleSubmit}
       className="flex flex-col max-w-sm mx-auto space-y-4 p-4 bg-gray-50 shadow-md rounded-lg"
     >
-      <label htmlFor="email" className="text-gray-700 font-semibold">
-        Enter your email to join:
-      </label>
-
       <input
         title="Email"
         id="email"
