@@ -4,14 +4,7 @@
 
 @layer utilities {
   body {
-    @apply text-charcoal text-[18px] font-sans;
-  }
-  h1 {
-    @apply font-lora;
-  }
-
-  h1 {
-    @apply text-[30px] md:text-[60px] leading-tight;
+    @apply text-charcoal text-[18px] font-normal;
   }
 
   .max-content {

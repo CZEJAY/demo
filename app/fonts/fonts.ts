@@ -1,15 +1,21 @@
-import { Lora, Poppins } from "next/font/google";
+import localFont from "next/font/local";
 
-export const lora = Lora({
-  subsets: ["latin"],
-  weight: ["600"],
-  display: "swap",
-  variable: "--font-lora",
-});
-
-export const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-  variable: "--font-poppins",
+export const postGroteskFont = localFont({
+  src: [
+    {
+      path: "./post-grotesk-book.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./PostGrotesk-Medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./PostGrotesk-Black.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
 });

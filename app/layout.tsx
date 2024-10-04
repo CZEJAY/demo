@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
-import "./globals.css";
 import { Header } from "@/components/shared/Header";
-import { lora } from "./fonts/fonts";
+import type { Metadata } from "next";
+import { postGroteskFont } from "./fonts/fonts";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Atoovis Create",
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased ${lora.variable}`}>
+      <body className={`antialiased ${postGroteskFont.className}`}>
         <Header />
         <div>{children}</div>
       </body>

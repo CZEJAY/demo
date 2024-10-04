@@ -11,12 +11,9 @@ const config: Config = {
       colors: {
         skyAqua: "#47c6cf",
         deepTeal: "#3fa7d6",
-        skyBlue: "#8ed1e8",
-        charcoal: "#333333",
-      },
 
-      fontFamily: {
-        lora: ["var(--font-lora)"],
+        charcoal: "#333333",
+        silverGray: "#BBB",
       },
     },
   },
