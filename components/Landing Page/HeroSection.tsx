@@ -1,27 +1,9 @@
 "use client";
-import { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 
 // import { Waitlist } from "@/components/Landing Page/Waitlist";
 
 export function HeroSection() {
-  const words = [
-    "Presentations",
-    "Pitch Decks",
-    "Resumes",
-    "Websites",
-    "Documents",
-  ];
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 1000); // Change word every 1 second
-
-    return () => clearInterval(intervalId);
-  }, []);
-
   return (
     <section className="flex items-center justify-center h-screen p-4 bg-black text-silverGray">
       <div className="max-content text-center">
