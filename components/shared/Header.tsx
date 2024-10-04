@@ -1,5 +1,5 @@
 import { RxHamburgerMenu } from "react-icons/rx";
-import { SlGlobe } from "react-icons/sl";
+// import { SlGlobe } from "react-icons/sl";
 
 export function Header() {
   return (
