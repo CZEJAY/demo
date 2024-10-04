@@ -12,7 +12,7 @@ export function HeroSection() {
             Experience a new way to share your stories and ideas.
           </span>
 
-          <div className="max-w-4xl transition-all delay-500 ease-linear">
+          <div className="max-w-4xl">
             <h1 className=" leading-tight text-[4rem] max-lg:text-[2.5rem] text-white font-bold max-lg:font-medium inline-block">
               AI-Powered{" "}
               <span className="text-deepTeal inline-block">
@@ -32,7 +32,7 @@ export function HeroSection() {
                     deleteSpeed: 100, // Adjust the speed of deletion
                   }}
                 />
-              </span>{" "}
+              </span>
               Creation Platform
             </h1>
           </div>

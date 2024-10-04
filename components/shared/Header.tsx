@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 p-4 bg-white border-b border-b-red-charcoal">
+    <header className="fixed top-0 left-0 right-0 p-4 lg:px-28 bg-white border-b border-b-red-charcoal">
       <div className="max-content flex items-center justify-between">
         <span className="text-black font-medium text-3xl tracking-tighter">
           Patexa
