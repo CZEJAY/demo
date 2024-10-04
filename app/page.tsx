@@ -2,8 +2,9 @@ import { HeroSection } from "@/components/Landing Page/HeroSection";
 
 export default function Home() {
   return (
-    <main className="h-[200vh]">
+    <main className="">
       <HeroSection />
+      <h1>Hey there</h1>
     </main>
   );
 }

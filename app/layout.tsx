@@ -1,3 +1,4 @@
+import { Footer } from "@/components/shared/Footer";
 import { Header } from "@/components/shared/Header";
 import type { Metadata } from "next";
 import { postGroteskFont } from "./fonts/fonts";
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body className={`antialiased ${postGroteskFont.className}`}>
         <Header />
         <div>{children}</div>
+        <Footer />
       </body>
     </html>
   );

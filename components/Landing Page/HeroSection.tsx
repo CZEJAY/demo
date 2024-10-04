@@ -27,9 +27,10 @@ export function HeroSection() {
                       "Websites",
                       "Documents",
                     ],
+                    delay: 150,
                     autoStart: true,
                     loop: true,
-                    deleteSpeed: 100, // Adjust the speed of deletion
+                    deleteSpeed: 150, // Adjust the speed of deletion
                   }}
                 />
               </span>
