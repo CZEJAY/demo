@@ -56,7 +56,12 @@ export function Footer() {
   );
 }
 
-function FooterLink({ name, content }: { name: string; content: any[] }) {
+interface LinkItem {
+  label: string;
+  href: string;
+}
+
+function FooterLink({ name, content }: { name: string; content: LinkItem[] }) {
   return (
     <div className="text-sm space-y-3">
       <span className="text-deepTeal uppercase lg:font-medium tracking-wide">
