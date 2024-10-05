@@ -7,6 +7,10 @@
     @apply text-charcoal text-[18px] font-normal;
   }
 
+  .hover-effects {
+    @apply transition-all ease-in;
+  }
+
   .max-content {
     @apply max-w-[1200px] mx-auto;
   }
