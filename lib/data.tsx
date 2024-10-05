@@ -20,9 +20,10 @@ export const productLinks = [
 ];
 
 export const pricingLinks = [
-  { label: "How it Works", href: "#" },
-  { label: "Presentation Software", href: "#" },
-  { label: "Slide Templates", href: "#" },
+  { label: "Pricing", href: "#" },
+  { label: "Pro", href: "#" },
+  { label: "Team", href: "#" },
+  { label: "Education", href: "#" },
 ];
 
 export const companyLinks = [
