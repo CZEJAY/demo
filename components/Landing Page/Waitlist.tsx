@@ -28,7 +28,7 @@ export function Waitlist() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Your Email"
-        className="px-4 py-2 border-none outline-none ring-1 ring-charcoal rounded-md focus:ring-2 focus:ring-skyAqua"
+        className="px-4 py-2 border-none outline-none ring-1 ring-charcoal rounded-md focus:ring-2 focus:ring-skyAqua text-black"
         required
       />
       <ValidationError
