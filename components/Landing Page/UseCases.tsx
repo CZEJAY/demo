@@ -39,7 +39,7 @@ export function CardItem({
       <h2>{title}</h2>
       <p className="text-black/50">{description}</p>
       <ul className="space-y-1">
-        {features.map((feature: any, idx: number) => (
+        {features.map((feature, idx) => (
           <li key={idx} className="flex items-center space-x-4">
             <span className="p-1 shadow-xl rounded-full">{feature.emoji}</span>
             <p>{feature.text}</p>
