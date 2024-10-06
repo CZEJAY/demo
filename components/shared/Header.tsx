@@ -7,7 +7,7 @@ import { useState } from "react";
 // import { useLockBodyScroll } from "@/lib/hooks/useLockBodyScroll";
 
 export function Header() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   // useLockBodyScroll(open);
   return (
     <header className="fixed top-0 left-0 right-0 py-4 max-lg:px-4 lg:px-14 xl:px-28 bg-white shadow-md z-10 text-black border-b border-b-red-charcoal">
