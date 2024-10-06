@@ -41,6 +41,7 @@ function CardItem({
         width={500}
         height={500}
         className="rounded-xl"
+        alt={src}
       />
 
       <div className="text-center">
