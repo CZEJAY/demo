@@ -18,7 +18,7 @@ export function Waitlist() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col max-w-sm mx-auto space-y-4 p-4 bg-gray-50 shadow-md rounded-lg"
+      className="flex flex-col max-w-sm mx-auto space-y-4 p-4 shadow-md rounded-lg"
     >
       <input
         title="Email"
@@ -42,7 +42,7 @@ export function Waitlist() {
         className={`${
           state.submitting
             ? "bg-gray-300 cursor-not-allowed"
-            : "bg-gradient-to-r from-deepTeal to-skyAqua hover:via-skyAqua hover:to-skyBlue text-white font-semibold"
+            : "bg-deepTeal hover:bg-deepTeal/70 text-white font-semibold"
         } px-2 py-2 rounded-lg transition duration-200`}
         type="submit"
         disabled={state.submitting}

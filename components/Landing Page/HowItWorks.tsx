@@ -6,9 +6,7 @@ export function HowItWorks() {
           <span className="text-black/50 text-xl">
             Start inspired—every time
           </span>
-          <h1 className="text-[3rem] max-lg:text-[2rem] leading-none font-medium max-lg:font-medium">
-            Create unlimited presentations, websites, and more—in seconds
-          </h1>
+          <h2>Create unlimited presentations, websites, and more—in seconds</h2>
           <p className="text-black/50">
             Everything you need to quickly create and refine content with
             advanced AI.

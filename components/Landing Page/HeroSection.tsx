@@ -1,7 +1,6 @@
 "use client";
 import Typewriter from "typewriter-effect";
-
-// import { Waitlist } from "@/components/Landing Page/Waitlist";
+import { Waitlist } from "@/components/Landing Page/Waitlist";
 
 export function HeroSection() {
   return (
@@ -13,7 +12,7 @@ export function HeroSection() {
           </span>
 
           <div className="max-w-4xl">
-            <h1 className=" leading-tight text-[4rem] max-lg:text-[2.5rem] text-white font-bold max-lg:font-medium inline-block">
+            <h1 className="text-white inline-block">
               AI-Powered{" "}
               <span className="text-deepTeal inline-block">
                 {" "}
@@ -48,11 +47,7 @@ export function HeroSection() {
           skills required. <br /> Bring your ideas to life effortlessly.
         </p>
 
-        <button className="px-6 py-3 bg-gradient-to-r from-deepTeal to-skyAqua text-white rounded-lg font-medium">
-          Sign Up Now
-        </button>
-
-        {/* <Waitlist /> */}
+        <Waitlist />
       </div>
     </section>
   );

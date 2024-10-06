@@ -7,6 +7,14 @@
     @apply text-black text-[18px] font-normal;
   }
 
+  h1 {
+    @apply leading-tight text-[4rem] max-lg:text-[2.5rem] font-bold max-lg:font-medium;
+  }
+
+  h2 {
+    @apply text-[3rem] max-lg:text-[2rem] leading-none font-medium max-lg:font-medium;
+  }
+
   .hover-effects {
     @apply transition-all ease-in;
   }

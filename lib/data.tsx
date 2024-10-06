@@ -71,3 +71,13 @@ export const navLinks = [
   { label: "Careers", href: "#" },
   { label: "Login", href: "#" },
 ];
+
+export const features = [
+  { label: "AI Designer" },
+  { label: "Data Visualization" },
+  { label: "Templates" },
+  { label: "Branded content" },
+  { label: "Content calendar" },
+  { label: "Graphics & assets" },
+  { label: "Interactivity" },
+];
