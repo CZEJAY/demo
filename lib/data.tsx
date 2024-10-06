@@ -65,3 +65,9 @@ export const footerSocialIcons = [
   { icon: <GrYoutube />, href: "#" },
   { icon: <GrPinterest />, href: "#" },
 ];
+
+export const navLinks = [
+  { label: "Pricing", href: "#" },
+  { label: "Careers", href: "#" },
+  { label: "Login", href: "#" },
+];

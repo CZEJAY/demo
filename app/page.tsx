@@ -1,10 +1,14 @@
 import { HeroSection } from "@/components/Landing Page/HeroSection";
+import { HowItWorks } from "@/components/Landing Page/HowItWorks";
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
-      <h1>Hey there</h1>
+      <HowItWorks />
+      <HowItWorks />
+      <HowItWorks />
+      <HowItWorks />
     </main>
   );
 }
