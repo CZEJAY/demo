@@ -4,11 +4,11 @@ import { Logo } from "./Logo";
 // import { RxHamburgerMenu } from "react-icons/rx";
 import Link from "next/link";
 import { useState } from "react";
-import { useLockBodyScroll } from "@/lib/hooks/useLockBodyScroll";
+// import { useLockBodyScroll } from "@/lib/hooks/useLockBodyScroll";
 
 export function Header() {
   const [open, setOpen] = useState(true);
-  useLockBodyScroll(open);
+  // useLockBodyScroll(open);
   return (
     <header className="fixed top-0 left-0 right-0 py-4 max-lg:px-4 lg:px-14 xl:px-28 bg-white shadow-md z-10 text-black border-b border-b-red-charcoal">
       <div className="max-content flex items-center justify-between">
@@ -30,9 +30,9 @@ export function Header() {
 
 function NavLinks() {
   return (
-    <ul className="flex max-md:flex-col max-md:space-y-4 md:items-center md:space-x-4">
+    <ul className="flex max-md:flex-col max-md:space-y-5 md:items-center md:space-x-5">
       {navLinks.map((item, idx) => (
-        <li key={idx}>
+        <li key={idx} className="hover:text-deepTeal hover-effects">
           <Link href={item.href}>{item.label}</Link>
         </li>
       ))}
