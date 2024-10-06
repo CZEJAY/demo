@@ -1,8 +1,9 @@
 import Image from "next/image";
+import { whatWillYouCreate } from "@/lib/data";
 
 export function WhatWillYouCreate() {
   return (
-    <section className="max-lg:px-4 lg:px-14 xl:px-28">
+    <section className="custom-container">
       <div className="max-content space-y-5 text-center text-black/50 ">
         <h2 className="text-black font-medium">
           What will you create with Patexa?
@@ -13,21 +14,14 @@ export function WhatWillYouCreate() {
         </p>
 
         <div className="grid md:grid-cols-2 gap-5">
-          <CardItem
-            title="Presentations"
-            content="Create engaging, interactive pitch decks."
-            src="presentation"
-          />
-          <CardItem
-            title="Documents"
-            content="Design professional reports, proposals, and white papers."
-            src="document"
-          />
-          <CardItem
-            title="Data Visualization"
-            content="Bring your data to life with interactive charts and graphs."
-            src="visualization"
-          />
+          {whatWillYouCreate.map((item, idx) => (
+            <CardItem
+              key={idx}
+              title={item.label}
+              content={item.content}
+              src={item.src}
+            />
+          ))}
         </div>
       </div>
     </section>

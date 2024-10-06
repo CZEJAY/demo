@@ -81,3 +81,124 @@ export const features = [
   { label: "Graphics & assets" },
   { label: "Interactivity" },
 ];
+
+export const whatWillYouCreate = [
+  {
+    label: "Presentations",
+    content: "Create engaging, interactive pitch decks.",
+    src: "presentation",
+  },
+  {
+    label: "Documents",
+    content: "Design professional reports, proposals, and white papers.",
+    src: "document",
+  },
+  {
+    label: "Data Visualization",
+    content: "Bring your data to life with interactive charts and graphs.",
+    src: "visualization",
+  },
+];
+
+export const teamWork = [
+  {
+    label: "Collaboration",
+    content:
+      "Bring your team together, no matter where they are in the world. Discuss ideas, give feedback and collaborate in real-time.",
+    src: "collaboration",
+  },
+  {
+    label: "Precise communication",
+    content:
+      "No more back and forth emails or Slack messages for feedback. Allow your team to comment, collaborate and move from draft to final format in no time.",
+    src: "communication",
+  },
+  {
+    label: "Asset management",
+    content:
+      "Easily store, organize and search the assets and designs for your team’s projects. Whether you’re creating a presentation, report, or infographic, find all your uploaded assets in one place.",
+    src: "management",
+  },
+];
+export const useCases = [
+  {
+    label: "Get help whenever you need it",
+    title: "Meet your AI-powered design partner",
+    description:
+      "Everything you need to quickly create and refine content with advanced AI.",
+    features: [
+      {
+        emoji: "😍",
+        text: "Access best-in-class AI for text, images, and search",
+      },
+      {
+        emoji: "🎨",
+        text: "Apply eye-catching, expert-level designs and layouts",
+      },
+      {
+        emoji: "🪄",
+        text: "Quickly rewrite or autocomplete your content",
+      },
+    ],
+  },
+  {
+    label: "Get help whenever you need it",
+    title: "Meet your AI-powered design partner",
+    description:
+      "Everything you need to quickly create and refine content with advanced AI.",
+    features: [
+      {
+        emoji: "😍",
+        text: "Access best-in-class AI for text, images, and search",
+      },
+      {
+        emoji: "🎨",
+        text: "Apply eye-catching, expert-level designs and layouts",
+      },
+      {
+        emoji: "🪄",
+        text: "Quickly rewrite or autocomplete your content",
+      },
+    ],
+  },
+  {
+    label: "Get help whenever you need it",
+    title: "Meet your AI-powered design partner",
+    description:
+      "Everything you need to quickly create and refine content with advanced AI.",
+    features: [
+      {
+        emoji: "😍",
+        text: "Access best-in-class AI for text, images, and search",
+      },
+      {
+        emoji: "🎨",
+        text: "Apply eye-catching, expert-level designs and layouts",
+      },
+      {
+        emoji: "🪄",
+        text: "Quickly rewrite or autocomplete your content",
+      },
+    ],
+  },
+  {
+    label: "Get help whenever you need it",
+    title: "Meet your AI-powered design partner",
+    description:
+      "Everything you need to quickly create and refine content with advanced AI.",
+    features: [
+      {
+        emoji: "😍",
+        text: "Access best-in-class AI for text, images, and search",
+      },
+      {
+        emoji: "🎨",
+        text: "Apply eye-catching, expert-level designs and layouts",
+      },
+      {
+        emoji: "🪄",
+        text: "Quickly rewrite or autocomplete your content",
+      },
+    ],
+  },
+];

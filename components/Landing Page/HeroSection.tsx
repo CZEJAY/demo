@@ -4,7 +4,7 @@ import { Waitlist } from "@/components/Landing Page/Waitlist";
 
 export function HeroSection() {
   return (
-    <section className="flex items-center justify-center h-screen 2xl:h-[50rem] p-4 bg-black text-silverGray">
+    <section className="flex items-center justify-center h-screen 2xl:h-[50rem] p-4 bg-black text-silverGray max-sm:mb-20 mb-40">
       <div className="max-content text-center">
         <div className="space-y-5 mb-5 lg:mb-10">
           <span className="text-xl tracking-wide">

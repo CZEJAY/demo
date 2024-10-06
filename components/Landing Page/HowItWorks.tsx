@@ -1,6 +1,6 @@
 export function HowItWorks() {
   return (
-    <section className="py-10 max-lg:px-4 lg:px-14 xl:px-28">
+    <section className="custom-container">
       <div className="grid md:grid-cols-2 gap-5 max-content">
         <div className="space-y-4">
           <span className="text-black/50 text-xl">

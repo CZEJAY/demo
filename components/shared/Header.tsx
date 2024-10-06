@@ -49,7 +49,7 @@ function NavToggle({
 }) {
   return (
     <div
-      className="size-10 relative focus:outline-none bg-silverGray/50 rounded-md"
+      className="size-10 relative focus:outline-none bg-silverGray/20 rounded-md"
       onClick={() => setOpen(!open)}
     >
       <div className="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">

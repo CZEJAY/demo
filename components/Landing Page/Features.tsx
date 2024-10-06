@@ -2,7 +2,7 @@ import { features } from "@/lib/data";
 
 export function Features() {
   return (
-    <section className="max-lg:px-4 lg:px-14 xl:px-28">
+    <section className="custom-container">
       <div className="max-content space-y-5">
         <div className="space-y-4 text-center">
           <span className=" text-xl uppercase">Features</span>
