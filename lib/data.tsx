@@ -79,7 +79,6 @@ export const features = [
   { label: "Branded content" },
   { label: "Content calendar" },
   { label: "Graphics & assets" },
-  { label: "Interactivity" },
 ];
 
 export const whatWillYouCreate = [
@@ -200,5 +199,26 @@ export const useCases = [
         text: "Quickly rewrite or autocomplete your content",
       },
     ],
+  },
+];
+
+export const reviews = [
+  {
+    src: "ibm",
+    altText: "IBM Logo",
+    reviewText:
+      "At the Broncos, we recommend Patexa to other teams, brands, or organizations looking for a one-stop shop to create internal and external collateral. Plus, the customer service is unmatched!",
+  },
+  {
+    src: "ibm",
+    altText: "IBM Logo",
+    reviewText:
+      "At the Broncos, we recommend Patexa to other teams, brands, or organizations looking for a one-stop shop to create internal and external collateral. Plus, the customer service is unmatched!",
+  },
+  {
+    src: "ibm",
+    altText: "IBM Logo",
+    reviewText:
+      "At the Broncos, we recommend Patexa to other teams, brands, or organizations looking for a one-stop shop to create internal and external collateral. Plus, the customer service is unmatched!",
   },
 ];

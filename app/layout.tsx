@@ -4,6 +4,11 @@ import type { Metadata } from "next";
 import { postGroteskFont } from "./fonts/fonts";
 import "./globals.css";
 
+// Swiper Styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 export const metadata: Metadata = {
   title: "Atoovis Create",
   description:

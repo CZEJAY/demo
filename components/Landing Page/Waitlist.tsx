@@ -43,7 +43,7 @@ export function Waitlist() {
           state.submitting
             ? "bg-gray-300 cursor-not-allowed"
             : "bg-deepTeal hover:bg-deepTeal/70 text-white font-semibold"
-        } px-2 py-2 rounded-lg transition duration-200`}
+        } px-2 py-2 rounded-md transition duration-200`}
         type="submit"
         disabled={state.submitting}
       >

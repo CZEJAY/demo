@@ -2,17 +2,15 @@ import { useCases } from "@/lib/data";
 
 export function UseCases() {
   return (
-    <section className="custom-container">
-      <div className="max-content grid md:grid-cols-2 md:gap-x-5 md:gap-y-10 max-md:space-y-20">
-        {useCases.map((item, idx) => (
-          <CardItem
-            key={idx}
-            title={item.title}
-            description={item.description}
-            features={item.features}
-          />
-        ))}
-      </div>
+    <section className="max-content grid md:grid-cols-2 md:gap-x-5 md:gap-y-10 max-md:space-y-20">
+      {useCases.map((item, idx) => (
+        <CardItem
+          key={idx}
+          title={item.title}
+          description={item.description}
+          features={item.features}
+        />
+      ))}
     </section>
   );
 }

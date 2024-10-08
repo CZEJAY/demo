@@ -26,4 +26,25 @@
   .max-content {
     @apply max-w-[1200px] mx-auto;
   }
+
+  /* Swiper Styles */
+  /* Styles for the Swiper Paginations Start */
+
+  .mySwiper .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+    @apply bg-deepTeal opacity-30;
+  }
+
+  .mySwiper .swiper-pagination-bullet-active {
+    @apply bg-deepTeal;
+  }
+
+  /* Styles for the Swiper Paginations End */
+
+  /* Styles for the Swiper Navigtions Start */
+
+  .mySwiper .swiper-button-next,
+  .mySwiper .swiper-button-prev {
+    @apply hidden;
+  }
+  /* Styles for the Swiper Navigtions End */
 }

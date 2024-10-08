@@ -3,26 +3,24 @@ import { whatWillYouCreate } from "@/lib/data";
 
 export function WhatWillYouCreate() {
   return (
-    <section className="custom-container">
-      <div className="max-content space-y-5 text-center text-black/50 ">
-        <h2 className="text-black font-medium">
-          What will you create with Patexa?
-        </h2>
-        <p>
-          The power of visual communication is in your hands. Start your first
-          project in minutes, even with no prior design experience.
-        </p>
+    <section className="max-content space-y-5 text-center text-black/50">
+      <h2 className="text-black font-medium">
+        What will you create with Patexa?
+      </h2>
+      <p>
+        The power of visual communication is in your hands. Start your first
+        project in minutes, even with no prior design experience.
+      </p>
 
-        <div className="grid md:grid-cols-2 gap-5">
-          {whatWillYouCreate.map((item, idx) => (
-            <CardItem
-              key={idx}
-              title={item.label}
-              content={item.content}
-              src={item.src}
-            />
-          ))}
-        </div>
+      <div className="grid md:grid-cols-2 gap-5">
+        {whatWillYouCreate.map((item, idx) => (
+          <CardItem
+            key={idx}
+            title={item.label}
+            content={item.content}
+            src={item.src}
+          />
+        ))}
       </div>
     </section>
   );
