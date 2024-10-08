@@ -10,7 +10,7 @@ export function Features() {
         </h2>
       </div>
 
-      <ul className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 text-center">
+      <ul className=" md:flex md:justify-between max-md:grid max-md:grid-cols-2 gap-5 text-center">
         {features.map((item, idx) => (
           <li
             key={idx}

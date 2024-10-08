@@ -4,7 +4,7 @@ import { Waitlist } from "@/components/Landing Page/Waitlist";
 
 export function HeroSection() {
   return (
-    <section className="flex items-center justify-center h-screen 2xl:h-[50rem] p-4 bg-black text-silverGray max-sm:mb-20 mb-40">
+    <section className="flex items-center justify-center h-screen 2xl:h-[50rem] p-4 bg-white">
       <div className="max-content text-center">
         <div className="space-y-5 mb-5 lg:mb-10">
           <span className="text-xl tracking-wide">
@@ -12,10 +12,9 @@ export function HeroSection() {
           </span>
 
           <div className="max-w-4xl">
-            <h1 className="text-white inline-block">
+            <h1 className="inline-block">
               AI-Powered{" "}
-              <span className="text-deepTeal inline-block">
-                {" "}
+              <span className="inline-block bg-gradient-to-r from-deepTeal to-skyAqua bg-clip-text text-transparent">
                 <Typewriter
                   options={{
                     strings: [
@@ -29,7 +28,7 @@ export function HeroSection() {
                     delay: 150,
                     autoStart: true,
                     loop: true,
-                    deleteSpeed: 150, // Adjust the speed of deletion
+                    deleteSpeed: 150,
                   }}
                 />
               </span>

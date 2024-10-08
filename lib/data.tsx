@@ -77,8 +77,6 @@ export const features = [
   { label: "Data Visualization" },
   { label: "Templates" },
   { label: "Branded content" },
-  { label: "Content calendar" },
-  { label: "Graphics & assets" },
 ];
 
 export const whatWillYouCreate = [
@@ -220,5 +218,26 @@ export const reviews = [
     altText: "IBM Logo",
     reviewText:
       "At the Broncos, we recommend Patexa to other teams, brands, or organizations looking for a one-stop shop to create internal and external collateral. Plus, the customer service is unmatched!",
+  },
+];
+
+export const solutions = [
+  {
+    imageSrc: "business",
+    altText: "Business",
+    title: "Business Owner",
+    description: "Create professional branded content in 70% less time",
+  },
+  {
+    imageSrc: "business",
+    altText: "Business",
+    title: "Business Owner",
+    description: "Create professional branded content in 70% less time",
+  },
+  {
+    imageSrc: "business",
+    altText: "Business",
+    title: "Business Owner",
+    description: "Create professional branded content in 70% less time",
   },
 ];

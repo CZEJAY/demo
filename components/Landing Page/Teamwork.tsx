@@ -9,7 +9,7 @@ export function Teamwork() {
         <h2>For you & your team</h2>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-5 md:gap-y-10 max-md:space-y-20">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-5 md:gap-y-5 max-md:space-y-5">
         {teamWork.map((item, idx) => (
           <CardItem
             key={idx}

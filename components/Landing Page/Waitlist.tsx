@@ -42,7 +42,7 @@ export function Waitlist() {
         className={`${
           state.submitting
             ? "bg-gray-300 cursor-not-allowed"
-            : "bg-deepTeal hover:bg-deepTeal/70 text-white font-semibold"
+            : "bg-gradient-to-r from-deepTeal to-skyAqua hover:from-skyAqua hover:to-deepTeal text-white font-semibold"
         } px-2 py-2 rounded-md transition duration-200`}
         type="submit"
         disabled={state.submitting}

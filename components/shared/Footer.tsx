@@ -11,7 +11,7 @@ import { Logo } from "./Logo";
 
 export function Footer() {
   return (
-    <footer className="bg-black text-white py-10 p-4 max-md:px-4 lg:px-14 xl:px-28 lg:py-20">
+    <footer className="bg-white py-10 p-4 max-md:px-4 lg:px-14 xl:px-28 lg:py-20">
       <div className="mb-8 lg:hidden flex justify-between items-center">
         <Logo />
 
