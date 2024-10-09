@@ -24,7 +24,7 @@ export default function SolutionsForEveryone() {
   );
 }
 
-function CardItem({
+function CardItem({  
   imageSrc,
   altText,
   title,
