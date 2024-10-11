@@ -9,16 +9,16 @@ import { WhatWillYouCreate } from "@/components/Landing Page/WhatWillYouCreate";
 
 export default function Home() {
   return (
-    <main className="min-h-screen max-sm:mb-20 mb-40">
+    <main className="min-h-screen mb-20 lg:mb-40">
       <HeroSection />
-      <div className=" max-sm:space-y-20 space-y-40 custom-container">
+      <div className=" space-y-20 lg:space-y-40 custom-container">
         <WhatWillYouCreate />
         <Reviews />
         <Features />
         <Teamwork />
-        <SolutionsForEveryone />
         <HowItWorks />
         <UseCases />
+        <SolutionsForEveryone />
       </div>
     </main>
   );

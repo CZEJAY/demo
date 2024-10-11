@@ -7,9 +7,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 export function Reviews() {
   return (
     <section className="max-content space-y-5">
-      <div className="space-y-4 max-w-2xl">
-        <span className=" text-xl uppercase">for professionals everywhere</span>
-        <h2>Used by 25 million people & businesses just like yours</h2>
+      <div className="space-y-4 text-center">
+        <span className=" text-xl uppercase text-center">
+          FOR PROFESSIONALS ACROSS THE GLOBE
+        </span>
+        <h2 className="">
+          Join the professionals who depend on us for success.
+        </h2>
+        <p className="text-black/50">Find solutions that help individuals and businesses like yours.</p>
       </div>
 
       <div className="max-md:hidden">
@@ -79,8 +84,8 @@ function CardItem({
   reviewText: string;
 }) {
   return (
-    <>
-      <div className="bg-white px-10 py-2 w-[fit-content] mb-5  rounded-md ">
+    <div className="flex flex-col justify-between min-h-[20rem]">
+      <div className="bg-white px-10 py-2 w-[fit-content] mb-5 rounded-md ">
         <Image
           src={`/assets/${src}.png`}
           width={500}
@@ -90,6 +95,6 @@ function CardItem({
         />
       </div>
       <p className="text-black/50">{reviewText}</p>
-    </>
+    </div>
   );
 }

@@ -4,7 +4,7 @@ import { Waitlist } from "@/components/Landing Page/Waitlist";
 
 export function HeroSection() {
   return (
-    <section className="flex items-center justify-center h-screen 2xl:h-[50rem] p-4 bg-white">
+    <section className="flex items-center justify-center max-lg:h-[80vh] h-screen 2xl:h-[50rem] p-4 bg-white ">
       <div className="max-content text-center">
         <div className="space-y-5 mb-5 lg:mb-10">
           <span className="text-xl tracking-wide">
@@ -14,7 +14,7 @@ export function HeroSection() {
           <div className="max-w-4xl">
             <h1 className="inline-block">
               AI-Powered{" "}
-              <span className="inline-block bg-gradient-to-r from-deepTeal to-skyAqua bg-clip-text text-transparent">
+              <span className="inline-block bg-gradient-to-r from-deepTeal via-tropicalBlue to-skyAqua bg-clip-text text-transparent">
                 <Typewriter
                   options={{
                     strings: [

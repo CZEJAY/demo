@@ -1,4 +1,4 @@
-import { FaFacebookF } from "react-icons/fa";
+import { FaFacebookF, FaTiktok } from "react-icons/fa";
 import {
   GrLinkedin,
   GrInstagram,
@@ -7,194 +7,153 @@ import {
   GrPinterest,
 } from "react-icons/gr";
 
-export const productLinks = [
-  { label: "How it Works", href: "#" },
-  { label: "Presentation Software", href: "#" },
-  { label: "Slide Templates", href: "#" },
-  { label: "Presentation Templates", href: "#" },
-  { label: "What's New", href: "#" },
-  { label: "Dropbox Integration", href: "#" },
-  { label: "Webex Integration", href: "#" },
-  { label: "Slack Integration", href: "#" },
-  { label: "Powerpoint Integration", href: "#" },
+export const addressLinks = [
+  { label: "701 Tillery Street, Austin, Texas, United States", href: "#" },
 ];
 
-export const pricingLinks = [
+export const contactLink = [
+  { label: "Email: hello@patexa.atoovis.com", href: "#" },
+];
+
+export const productLinks = [
+  { label: "Help", href: "#" },
   { label: "Pricing", href: "#" },
-  { label: "Pro", href: "#" },
-  { label: "Team", href: "#" },
-  { label: "Education", href: "#" },
 ];
 
 export const companyLinks = [
   { label: "About Us", href: "#" },
-  { label: "Support", href: "#" },
-  { label: "Careers", href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Disclosure", href: "#" },
-  { label: "Security", href: "#" },
-  { label: "Cookie Preferences", href: "#" },
-];
-
-export const resourcesLinks = [
   { label: "Blog", href: "#" },
-  { label: "Testimonials", href: "#" },
-  { label: "Case Studies", href: "#" },
-  { label: "Refer A Friend", href: "#" },
-  { label: "Scholarship", href: "#" },
-  { label: "Q4 Business Kit", href: "#" },
-];
-
-export const compareLinks = [
-  { label: "PowerPoint", href: "#" },
-  { label: "Google Slides", href: "#" },
-  { label: "Keynote", href: "#" },
-  { label: "Prezi", href: "#" },
-  { label: "Slidebean", href: "#" },
-  { label: "Visme", href: "#" },
-  { label: "Pitch", href: "#" },
-  { label: "Microsoft Copilot", href: "#" },
 ];
 
 export const footerSocialIcons = [
-  { icon: <GrLinkedin />, href: "#" },
-  { icon: <GrInstagram />, href: "#" },
   { icon: <FaFacebookF />, href: "#" },
   { icon: <GrTwitter />, href: "#" },
-  { icon: <GrYoutube />, href: "#" },
-  { icon: <GrPinterest />, href: "#" },
+  { icon: <GrInstagram />, href: "#" },
+  { icon: <FaTiktok />, href: "#" },
+  { icon: <GrLinkedin />, href: "#" },
 ];
 
 export const navLinks = [
-  { label: "Pricing", href: "#" },
-  { label: "Careers", href: "#" },
   { label: "Login", href: "#" },
+  { label: "Pricing", href: "#" },
+  { label: "Language", href: "#" },
 ];
 
 export const features = [
-  { label: "AI Designer" },
-  { label: "Data Visualization" },
-  { label: "Templates" },
-  { label: "Branded content" },
+  { label: "AI-Powered Design Assistant " },
+  { label: "Branded Content, Ideas Generator & Optimizer " },
+  { label: "Drag-and-Drop Editor" },
+  { label: "Real-Time Collaborative Tools  " },
+  { label: "No-Code Customizable Templates " },
+  { label: "Data Visualization  " },
 ];
 
 export const whatWillYouCreate = [
   {
     label: "Presentations",
-    content: "Create engaging, interactive pitch decks.",
+    content: "Design engaging slide decks for meetings, pitches, or lectures.",
     src: "presentation",
   },
   {
     label: "Documents",
-    content: "Design professional reports, proposals, and white papers.",
+    content:
+      "Create professional resumes, reports, proposals, and white papers.",
     src: "document",
   },
   {
-    label: "Data Visualization",
-    content: "Bring your data to life with interactive charts and graphs.",
+    label: "Marketing Content and Visuals",
+    content:
+      "Create captivating content, interactive charts, and infographics that simplify complex information.",
     src: "visualization",
   },
 ];
 
 export const teamWork = [
   {
-    label: "Collaboration",
+    label: "Centralized Communication",
     content:
-      "Bring your team together, no matter where they are in the world. Discuss ideas, give feedback and collaborate in real-time.",
-    src: "collaboration",
-  },
-  {
-    label: "Precise communication",
-    content:
-      "No more back and forth emails or Slack messages for feedback. Allow your team to comment, collaborate and move from draft to final format in no time.",
+      "The platform serves as a hub for discussions related to specific projects, reducing the need for separate messaging apps and keeping all relevant information in one place.",
     src: "communication",
   },
   {
-    label: "Asset management",
+    label: "Centralized Feedback and Iteration",
     content:
-      "Easily store, organize and search the assets and designs for your team’s projects. Whether you’re creating a presentation, report, or infographic, find all your uploaded assets in one place.",
-    src: "management",
+      "Team members can leave comments and suggestions directly on the document, facilitating quick revisions. This feature helps teams efficiently incorporate feedback, ensuring all ideas are considered and projects are refined effectively.",
+    src: "communication",
+  },
+  {
+    label: "Shared Branded Templates",
+    content:
+      "Teams can create and store-branded templates for consistent messaging and design across all materials. This not only saves time but also helps maintain a cohesive brand identity in presentations, reports, and marketing content.",
+    src: "communication",
   },
 ];
 export const useCases = [
   {
-    label: "Get help whenever you need it",
-    title: "Meet your AI-powered design partner",
-    description:
-      "Everything you need to quickly create and refine content with advanced AI.",
+    title: "Your Personal AI Design & Copywriting Assistant",
     features: [
       {
         emoji: "😍",
-        text: "Access best-in-class AI for text, images, and search",
+        text: "Get instant, personalized text and visuals.",
       },
       {
         emoji: "🎨",
-        text: "Apply eye-catching, expert-level designs and layouts",
+        text: "Professional layouts are applied in one click.",
       },
       {
         emoji: "🪄",
-        text: "Quickly rewrite or autocomplete your content",
+        text: "Rewrite or autocomplete your content fast to stay ahead.",
       },
     ],
   },
   {
-    label: "Get help whenever you need it",
-    title: "Meet your AI-powered design partner",
-    description:
-      "Everything you need to quickly create and refine content with advanced AI.",
+    title: "Seamless Design & Copywriting Updates for Quick Edits",
     features: [
       {
         emoji: "😍",
-        text: "Access best-in-class AI for text, images, and search",
+        text: "Easily import files or presentations.",
       },
       {
         emoji: "🎨",
-        text: "Apply eye-catching, expert-level designs and layouts",
+        text: "Copy and paste text with zero hassle.",
       },
       {
         emoji: "🪄",
-        text: "Quickly rewrite or autocomplete your content",
+        text: "Export polished PDFs and PPTs instantly.",
       },
     ],
   },
   {
-    label: "Get help whenever you need it",
-    title: "Meet your AI-powered design partner",
-    description:
-      "Everything you need to quickly create and refine content with advanced AI.",
+    title: "Share, Publish, and Track—Anywhere",
     features: [
       {
         emoji: "😍",
-        text: "Access best-in-class AI for text, images, and search",
+        text: "Ensure your content looks great on any device.",
       },
       {
         emoji: "🎨",
-        text: "Apply eye-catching, expert-level designs and layouts",
+        text: "See what works with real-time analytics.",
       },
       {
         emoji: "🪄",
-        text: "Quickly rewrite or autocomplete your content",
+        text: "Collaborate live with your team for fast feedback and updates.",
       },
     ],
   },
   {
-    label: "Get help whenever you need it",
-    title: "Meet your AI-powered design partner",
-    description:
-      "Everything you need to quickly create and refine content with advanced AI.",
+    title: "Collaborate live with your team for fast feedback and updates.",
     features: [
       {
         emoji: "😍",
-        text: "Access best-in-class AI for text, images, and search",
+        text: "Drag-and-drop galleries, videos, and embeds.",
       },
       {
         emoji: "🎨",
-        text: "Apply eye-catching, expert-level designs and layouts",
+        text: "Turn your data into easy-to-read charts and tables.",
       },
       {
         emoji: "🪄",
-        text: "Quickly rewrite or autocomplete your content",
+        text: "Start with templates that save time—just add your touch.",
       },
     ],
   },
@@ -203,41 +162,51 @@ export const useCases = [
 export const reviews = [
   {
     src: "ibm",
-    altText: "IBM Logo",
+    altText: "JBells",
     reviewText:
-      "At the Broncos, we recommend Patexa to other teams, brands, or organizations looking for a one-stop shop to create internal and external collateral. Plus, the customer service is unmatched!",
+      "This tool has streamlined our project proposals and client presentations. The templates are versatile and easy to customize, allowing us to maintain a consistent brand image. We've noticed an increase in client engagement and feedback since we started using it. It's an invaluable resource for our team.",
   },
   {
-    src: "ibm",
-    altText: "IBM Logo",
+    src: "cynthia obi",
+    altText: "cynthia obi",
     reviewText:
-      "At the Broncos, we recommend Patexa to other teams, brands, or organizations looking for a one-stop shop to create internal and external collateral. Plus, the customer service is unmatched!",
+      "As a small business owner, I needed a tool that could help me present my ideas clearly and with eye-catching marketing materials without breaking the bank. This platform has exceeded my expectations! It’s intuitive and offers great templates, allowing me to produce high-quality graphics and content effortlessly. It’s become my go-to resource!",
   },
   {
-    src: "ibm",
-    altText: "IBM Logo",
+    src: "mark john",
+    altText: "Mark John",
     reviewText:
-      "At the Broncos, we recommend Patexa to other teams, brands, or organizations looking for a one-stop shop to create internal and external collateral. Plus, the customer service is unmatched!",
+      "I love how easy it is to use. Whether I’m creating a resume, planning a presentation or pitch deck, everything is straightforward and effective. It has made my work so much easier!",
   },
 ];
 
 export const solutions = [
   {
     imageSrc: "business",
-    altText: "Business",
-    title: "Business Owner",
-    description: "Create professional branded content in 70% less time",
+    altText: "Entrepreneurs",
+    title: "Entrepreneurs",
+    description:
+      "Create compelling pitch decks that attract investors and showcase your vision.",
   },
   {
     imageSrc: "business",
-    altText: "Business",
-    title: "Business Owner",
-    description: "Create professional branded content in 70% less time",
+    altText: "Businesses",
+    title: "Businesses",
+    description:
+      "Effortlessly generate presentations, marketing materials, and reports to drive your projects forward.",
   },
   {
     imageSrc: "business",
-    altText: "Business",
-    title: "Business Owner",
-    description: "Create professional branded content in 70% less time",
+    altText: "Individual Professionals",
+    title: "Individual Professionals",
+    description:
+      "Build visually stunning presentations, resumes, and portfolios that highlight your skills and experience.",
+  },
+  {
+    imageSrc: "business",
+    altText: "Educational Institutions",
+    title: "Educational Institutions",
+    description:
+      "Design tailored lesson plans and engaging educational content that cater to diverse learning needs.",
   },
 ];

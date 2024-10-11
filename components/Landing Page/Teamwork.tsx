@@ -6,7 +6,7 @@ export function Teamwork() {
     <section className="max-content space-y-5">
       <div className="space-y-4 text-center">
         <span className=" text-xl uppercase">teamwork</span>
-        <h2>For you & your team</h2>
+        <h2>Team Collaboration with Patexa </h2>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-5 md:gap-y-5 max-md:space-y-5">
@@ -42,7 +42,7 @@ function CardItem({
         alt={src}
       />
 
-      <div className="text-center">
+      <div className="text-center text-pretty">
         <span className="text-xl font-medium">{title}</span>
         <p className="text-black/50">{content}</p>
       </div>

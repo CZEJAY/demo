@@ -4,9 +4,17 @@ import Image from "next/image";
 export default function SolutionsForEveryone() {
   return (
     <section className="max-content space-y-5">
-      <div className="space-y-4 text-center">
-        <span className=" text-xl uppercase">solutions for everyone</span>
+      <div className="space-y-4 flex  flex-col items-center">
+        <span className=" text-xl uppercase text-center">
+          Perfect for Every Industry and Professional
+        </span>
         <h2>What can Patexa do for you?</h2>
+
+        <p className="text-black/50 max-w-2xl text-center">
+          No matter your role or design and copywriting skills, Patexa
+          simplifies your tasks with our comprehensive solution, helping you
+          save up to 65% of your time.
+        </p>
       </div>
 
       <div className="space-y-5">

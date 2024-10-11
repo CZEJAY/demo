@@ -6,11 +6,11 @@ export function Features() {
       <div className="space-y-4 text-center">
         <span className=" text-xl uppercase">Features</span>
         <h2>
-          More design capabilities. <br /> Effortless ease-of-use.
+          Transform Your Content with Our Powerful Features
         </h2>
       </div>
 
-      <ul className=" md:flex md:justify-between max-md:grid max-md:grid-cols-2 gap-5 text-center">
+      <ul className="grid md:grid-cols-2 gap-5 text-center">
         {features.map((item, idx) => (
           <li
             key={idx}

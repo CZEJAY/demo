@@ -4,12 +4,10 @@ import { whatWillYouCreate } from "@/lib/data";
 export function WhatWillYouCreate() {
   return (
     <section className="max-content space-y-5 text-center text-black/50">
-      <h2 className="text-black font-medium">
-        What will you create with Patexa?
-      </h2>
+      <h2 className="text-black font-medium">Create with Patexa</h2>
       <p>
-        The power of visual communication is in your hands. Start your first
-        project in minutes, even with no prior design experience.
+        No design, writing, or coding skills needed. Bring your ideas to life
+        like never before.
       </p>
 
       <div className="grid md:grid-cols-2 gap-5">
