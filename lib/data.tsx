@@ -3,8 +3,6 @@ import {
   GrLinkedin,
   GrInstagram,
   GrTwitter,
-  GrYoutube,
-  GrPinterest,
 } from "react-icons/gr";
 
 export const addressLinks = [
