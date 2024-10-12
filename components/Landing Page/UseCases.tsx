@@ -24,8 +24,8 @@ export function CardItem({
 }) {
   return (
     <div className="space-y-4">
-      <h2>{title}</h2>
-      <ul className="space-y-1">
+      <h2 className="md:min-h-[9rem]">{title}</h2>
+      <ul className="space-y-1 md:min-h-[9rem]">
         {features.map((feature, idx) => (
           <li key={idx} className="flex items-center space-x-4">
             <span className="p-1 shadow-xl rounded-full">{feature.emoji}</span>

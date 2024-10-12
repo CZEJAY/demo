@@ -1,9 +1,5 @@
 import { FaFacebookF, FaTiktok } from "react-icons/fa";
-import {
-  GrLinkedin,
-  GrInstagram,
-  GrTwitter,
-} from "react-icons/gr";
+import { GrLinkedin, GrInstagram, GrTwitter } from "react-icons/gr";
 
 export const addressLinks = [
   { label: "701 Tillery Street, Austin, Texas, United States", href: "#" },
@@ -91,15 +87,15 @@ export const useCases = [
     title: "Your Personal AI Design & Copywriting Assistant",
     features: [
       {
-        emoji: "😍",
+        emoji: "⚡️",
         text: "Get instant, personalized text and visuals.",
       },
       {
-        emoji: "🎨",
+        emoji: "💡",
         text: "Professional layouts are applied in one click.",
       },
       {
-        emoji: "🪄",
+        emoji: "🚀",
         text: "Rewrite or autocomplete your content fast to stay ahead.",
       },
     ],
@@ -108,15 +104,15 @@ export const useCases = [
     title: "Seamless Design & Copywriting Updates for Quick Edits",
     features: [
       {
-        emoji: "😍",
+        emoji: "📂",
         text: "Easily import files or presentations.",
       },
       {
-        emoji: "🎨",
+        emoji: "✂️",
         text: "Copy and paste text with zero hassle.",
       },
       {
-        emoji: "🪄",
+        emoji: "📄",
         text: "Export polished PDFs and PPTs instantly.",
       },
     ],
@@ -125,15 +121,15 @@ export const useCases = [
     title: "Share, Publish, and Track—Anywhere",
     features: [
       {
-        emoji: "😍",
+        emoji: "📱",
         text: "Ensure your content looks great on any device.",
       },
       {
-        emoji: "🎨",
+        emoji: "📊",
         text: "See what works with real-time analytics.",
       },
       {
-        emoji: "🪄",
+        emoji: "🤝",
         text: "Collaborate live with your team for fast feedback and updates.",
       },
     ],
@@ -142,15 +138,15 @@ export const useCases = [
     title: "Collaborate live with your team for fast feedback and updates.",
     features: [
       {
-        emoji: "😍",
+        emoji: "🖼️",
         text: "Drag-and-drop galleries, videos, and embeds.",
       },
       {
-        emoji: "🎨",
+        emoji: "📈",
         text: "Turn your data into easy-to-read charts and tables.",
       },
       {
-        emoji: "🪄",
+        emoji: "📝",
         text: "Start with templates that save time—just add your touch.",
       },
     ],
@@ -165,13 +161,13 @@ export const reviews = [
       "This tool has streamlined our project proposals and client presentations. The templates are versatile and easy to customize, allowing us to maintain a consistent brand image. We've noticed an increase in client engagement and feedback since we started using it. It's an invaluable resource for our team.",
   },
   {
-    src: "cynthia obi",
+    src: "",
     altText: "cynthia obi",
     reviewText:
       "As a small business owner, I needed a tool that could help me present my ideas clearly and with eye-catching marketing materials without breaking the bank. This platform has exceeded my expectations! It’s intuitive and offers great templates, allowing me to produce high-quality graphics and content effortlessly. It’s become my go-to resource!",
   },
   {
-    src: "mark john",
+    src: "",
     altText: "Mark John",
     reviewText:
       "I love how easy it is to use. Whether I’m creating a resume, planning a presentation or pitch deck, everything is straightforward and effective. It has made my work so much easier!",

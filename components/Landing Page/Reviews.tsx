@@ -88,7 +88,11 @@ function CardItem({
 }) {
   return (
     <div className="flex flex-col justify-between">
-      <div className="bg-white px-10 py-2 w-[fit-content] mb-5 rounded-md ">
+      <div
+        className={`bg-white px-10 py-2 w-[fit-content] mb-5 rounded-md ${
+          !src && "invisible"
+        }`}
+      >
         <Image
           src={`/assets/${src}.jpg`}
           width={500}
@@ -97,7 +101,8 @@ function CardItem({
           className="size-10"
         />
       </div>
-      <p className="text-black/50 min-h-[12rem]">{reviewText}</p>
+      <p className="text-black/50 min-h-[14rem]">{reviewText}</p>
+      <span className="capitalize">{altText}</span>
     </div>
   );
 }
