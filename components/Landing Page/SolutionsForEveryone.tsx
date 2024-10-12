@@ -46,7 +46,7 @@ function CardItem({
   return (
     <div className="max-md:grid max-md:grid-cols-3 md:flex items-center space-x-5 ring-1 ring-silverGray/50 rounded-md p-5">
       <Image
-        src={`/assets/${imageSrc}.webp`}
+        src={`/assets/${imageSrc}.jpg`}
         width={150}
         height={200}
         alt={altText}

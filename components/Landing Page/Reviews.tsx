@@ -14,7 +14,9 @@ export function Reviews() {
         <h2 className="">
           Join the professionals who depend on us for success.
         </h2>
-        <p className="text-black/50">Find solutions that help individuals and businesses like yours.</p>
+        <p className="text-black/50">
+          Find solutions that help individuals and businesses like yours.
+        </p>
       </div>
 
       <div className="max-md:hidden">
@@ -51,6 +53,7 @@ export function Reviews() {
           pagination={{
             dynamicBullets: true,
           }}
+          spaceBetween={50}
           navigation={true}
           speed={700}
           modules={[Pagination, Navigation]}
@@ -84,17 +87,17 @@ function CardItem({
   reviewText: string;
 }) {
   return (
-    <div className="flex flex-col justify-between min-h-[20rem]">
+    <div className="flex flex-col justify-between">
       <div className="bg-white px-10 py-2 w-[fit-content] mb-5 rounded-md ">
         <Image
-          src={`/assets/${src}.png`}
+          src={`/assets/${src}.jpg`}
           width={500}
           height={500}
           alt={altText}
           className="size-10"
         />
       </div>
-      <p className="text-black/50">{reviewText}</p>
+      <p className="text-black/50 min-h-[12rem]">{reviewText}</p>
     </div>
   );
 }

@@ -77,13 +77,13 @@ export const teamWork = [
     label: "Centralized Feedback and Iteration",
     content:
       "Team members can leave comments and suggestions directly on the document, facilitating quick revisions. This feature helps teams efficiently incorporate feedback, ensuring all ideas are considered and projects are refined effectively.",
-    src: "communication",
+    src: "feedback",
   },
   {
     label: "Shared Branded Templates",
     content:
       "Teams can create and store-branded templates for consistent messaging and design across all materials. This not only saves time but also helps maintain a cohesive brand identity in presentations, reports, and marketing content.",
-    src: "communication",
+    src: "branded",
   },
 ];
 export const useCases = [
@@ -159,7 +159,7 @@ export const useCases = [
 
 export const reviews = [
   {
-    src: "ibm",
+    src: "jbells",
     altText: "JBells",
     reviewText:
       "This tool has streamlined our project proposals and client presentations. The templates are versatile and easy to customize, allowing us to maintain a consistent brand image. We've noticed an increase in client engagement and feedback since we started using it. It's an invaluable resource for our team.",
@@ -180,7 +180,7 @@ export const reviews = [
 
 export const solutions = [
   {
-    imageSrc: "business",
+    imageSrc: "entrepreneur",
     altText: "Entrepreneurs",
     title: "Entrepreneurs",
     description:
@@ -194,14 +194,14 @@ export const solutions = [
       "Effortlessly generate presentations, marketing materials, and reports to drive your projects forward.",
   },
   {
-    imageSrc: "business",
+    imageSrc: "professional",
     altText: "Individual Professionals",
     title: "Individual Professionals",
     description:
       "Build visually stunning presentations, resumes, and portfolios that highlight your skills and experience.",
   },
   {
-    imageSrc: "business",
+    imageSrc: "institutions",
     altText: "Educational Institutions",
     title: "Educational Institutions",
     description:

@@ -9,7 +9,7 @@ export function HowItWorks() {
         </p>
       </div>
 
-      <div className="h-full w-full bg-silverGray shadow-md rounded-md"></div>
+      <div className="h-full hidden w-full bg-silverGray shadow-md rounded-md"></div>
     </section>
   );
 }

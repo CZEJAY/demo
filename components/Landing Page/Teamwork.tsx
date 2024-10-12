@@ -35,15 +35,17 @@ function CardItem({
   return (
     <div className="bg-silverGray/20 shadow-lg p-5 rounded-md space-y-5 flex flex-col items-center">
       <Image
-        src={`/assets/${src}.webp`}
+        src={`/assets/${src}.jpg`}
         width={500}
         height={500}
-        className="rounded-md"
+        className="rounded-md object-cover h-[20rem]"
         alt={src}
       />
 
       <div className="text-center text-pretty">
-        <span className="text-xl font-medium">{title}</span>
+        <div className="md:min-h-[5rem]">
+          <span className="text-xl font-medium">{title}</span>
+        </div>
         <p className="text-black/50">{content}</p>
       </div>
     </div>
