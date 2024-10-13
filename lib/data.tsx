@@ -20,11 +20,11 @@ export const companyLinks = [
 ];
 
 export const footerSocialIcons = [
-  { icon: <FaFacebookF />, href: "#" },
-  { icon: <GrTwitter />, href: "#" },
-  { icon: <GrInstagram />, href: "#" },
-  { icon: <FaTiktok />, href: "#" },
-  { icon: <GrLinkedin />, href: "#" },
+  { icon: <FaFacebookF size={20} />, href: "#" },
+  { icon: <GrTwitter size={20} />, href: "#" },
+  { icon: <GrInstagram size={20} />, href: "#" },
+  { icon: <FaTiktok size={20} />, href: "#" },
+  { icon: <GrLinkedin size={20} />, href: "#" },
 ];
 
 export const navLinks = [

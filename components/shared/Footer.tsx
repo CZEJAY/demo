@@ -1,3 +1,5 @@
+'use client'
+
 import {
   addressLinks,
   companyLinks,
@@ -7,58 +9,77 @@ import {
 } from "@/lib/data";
 import Link from "next/link";
 import { Logo } from "./Logo";
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export function Footer() {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <footer className="bg-white p-4 max-md:px-4 lg:px-14 xl:px-28">
-      <div className="mb-8 lg:hidden">
+    <footer ref={ref} className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-16">
+      <div className="mb-8 lg:hidden text-center">
         <Logo />
       </div>
 
-      <div className="max-content grid md:grid-cols-3 lg:grid-cols-6 gap-10 mb-20">
-        <div className="max-lg:hidden space-y-20 flex flex-col">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 lg:grid-cols-6 gap-10 mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="max-lg:hidden space-y-10 flex flex-col"
+        >
           <div className="flex-1">
             <Logo />
           </div>
 
-          <div className="grid grid-cols-3 gap-y-4">
+          <div className="flex space-x-4">
             {footerSocialIcons.map((item, idx) => (
-              <Link
-                key={idx}
-                href={item.href}
-                className="hover-effects hover:text-silverGray"
-              >
-                {item.icon}
+              <Link key={idx} href={item.href} className="hover:text-indigo-400">
+                <motion.div
+                  whileHover={{ scale: 1.2 }}
+                  className="text-2xl transition duration-300"
+                >
+                  {item.icon}
+                </motion.div>
               </Link>
             ))}
           </div>
-        </div>
-        <FooterLink name="products" content={productLinks} />
-        <FooterLink name="company" content={companyLinks} />
-        <FooterLink name="Address" content={addressLinks} />
-        <FooterLink name="Contact Us" content={contactLink} />
+        </motion.div>
+
+        <FooterLink name="products" content={productLinks} inView={inView} />
+        <FooterLink name="company" content={companyLinks} inView={inView} />
+        <FooterLink name="Address" content={addressLinks} inView={inView} />
+        <FooterLink name="Contact Us" content={contactLink} inView={inView} />
       </div>
 
       <div className="lg:hidden mb-5">
         <div className="flex space-x-4 justify-center">
           {footerSocialIcons.map((item, idx) => (
-            <Link
-              key={idx}
-              href={item.href}
-              className="hover-effects hover:text-deepTeal"
-            >
-              {item.icon}
+            <Link key={idx} href={item.href} className="hover:text-primary">
+              <motion.div
+                whileHover={{ scale: 1.2 }}
+                className="text-md transition duration-300"
+              >
+                {item.icon}
+              </motion.div>
             </Link>
           ))}
         </div>
       </div>
 
-      <div className="text-center max-lg:text-base lg:font-light mb-5">
-        <span>
+      <div className="text-center text-sm font-light">
+        <motion.span
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
           © 2024 Patexa or its affiliate. All rights reserved.{" "}
-          <span className="underline cursor-pointer">Privacy Policy</span> |{" "}
-          <span className="underline cursor-pointer">Terms of Service</span>
-        </span>
+          <Link href="#" className="underline text-primary">Privacy Policy</Link> |{" "}
+          <Link href="#" className="underline text-primary">Terms of Service</Link>
+        </motion.span>
       </div>
     </footer>
   );
@@ -69,22 +90,28 @@ interface LinkItem {
   href: string;
 }
 
-function FooterLink({ name, content }: { name: string; content: LinkItem[] }) {
+function FooterLink({
+  name,
+  content,
+  inView,
+}: {
+  name: string;
+  content: LinkItem[];
+  inView: boolean;
+}) {
   return (
-    <div className="text-sm space-y-3">
-      <span className="text-deepTeal uppercase lg:font-medium tracking-wide">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+      className="text-sm space-y-4"
+    >
+      <span className="text-primary uppercase font-medium tracking-wide">
         {name}
       </span>
-      <ul className="space-y-3">
+      <ul className="space-y-2">
         {content.map((item, idx) => (
-          <li
-            key={idx}
-            className={`max-lg:text-base lg:font-light ${
-              name !== "Address" && name !== "Contact Us"
-                ? "hover:text-deepTeal hover-effects "
-                : null
-            }`}
-          >
+          <li key={idx} className="hover:text-primary transition-colors duration-300">
             {name !== "Address" && name !== "Contact Us" ? (
               <Link href={item.href}>{item.label}</Link>
             ) : (
@@ -93,6 +120,6 @@ function FooterLink({ name, content }: { name: string; content: LinkItem[] }) {
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 }

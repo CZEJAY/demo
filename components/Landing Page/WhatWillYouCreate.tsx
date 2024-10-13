@@ -85,7 +85,7 @@ export function WhatWillYouCreate() {
         }}
         className="relative z-10 text-center"
       >
-        <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Create with Patexa</h2>
+        <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Create with <span className="gradient-text">Patexa</span></h2>
         <p className="mt-4 text-xl gradient-text">
           No design, writing, or coding skills needed. Bring your ideas to life like never before.
         </p>

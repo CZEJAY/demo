@@ -6,6 +6,7 @@ import Image from "next/image"
 import { Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { motion, AnimatePresence } from 'framer-motion'
+import { useInView } from "react-intersection-observer"
 import { Quote } from 'lucide-react'
 
 const BackgroundPattern = () => (
@@ -23,26 +24,33 @@ const BackgroundPattern = () => (
 
 export function Reviews() {
   const [activeIndex, setActiveIndex] = useState(0)
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
 
   return (
-    <section className="relative max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8 space-y-12 overflow-hidden">
+    <section ref={ref} className="relative max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8 space-y-12 overflow-hidden">
       <BackgroundPattern />
       <motion.div 
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+        }}
         className="relative z-10 space-y-4 text-center"
       >
         <motion.span 
-          className="inline-block text-xl md:text-4xl uppercase bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text font-bold"
+          className="inline-block text-xl capitalize md:text-4xl bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text font-bold"
           whileHover={{ scale: 1.05 }}
         >
-          FOR PROFESSIONALS ACROSS THE GLOBE
+          For Professionals Across The Globe
         </motion.span>
-        <h2 className="text-xl font-extrabold text-gray-900 ">
+        <h2 className="text-lg font-semibold text-gray-900 ">
           Join the professionals who depend on us for success.
         </h2>
-        <p className="text-xl text-gray-600">
+        <p className="text-lg text-gray-600">
           Find solutions that help individuals and businesses like yours.
         </p>
       </motion.div>
