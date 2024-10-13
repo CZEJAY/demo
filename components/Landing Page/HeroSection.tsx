@@ -109,12 +109,14 @@ export function HeroSection() {
         variants={containerVariants}
         className="relative z-10 max-w-4xl text-center text-white"
       >
-        <motion.span variants={itemVariants} className="text-xl md:tracking-wide mb-4 block">
+        <motion.span variants={itemVariants} className="text-xl text-white rounded-lg md:tracking-wide mb-4 block">
           Experience a new way to share your stories and ideas.
         </motion.span>
 
         <motion.h1 variants={itemVariants} className="text-4xl flex flex-col md:text-6xl font-bold mb-6">
-          AI-Powered{' '}
+        <span>
+          <span className='bg-gradient-to-r from-teal-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent'>AI</span>-Powered{' '}
+        </span>
           <div className="inline-block bg-gradient-to-r from-teal-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
             <Typewriter
               options={{

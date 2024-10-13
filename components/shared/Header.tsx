@@ -27,7 +27,7 @@ export function Header() {
       animate={{ y: 0 }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
       className={`fixed top-0 left-0 right-0 z-50 px-3 transition-colors duration-300 ${
-        isScrolled ? 'bg-[#1a1a2e]' : 'bg-transparent'
+        isScrolled ? 'bg-gradient-to-br from-gray-900 to-gray-800' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +66,7 @@ export function Header() {
 function Logo() {
   return (
     <Link href="/" className="flex items-center">
-      <span className="text-white text-xl font-bold">Patexa</span>
+      <span className="text-white text-3xl font-bold">Patexa</span>
     </Link>
   )
 }
