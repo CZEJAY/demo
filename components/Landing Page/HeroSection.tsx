@@ -140,9 +140,9 @@ export function HeroSection() {
           Bring your ideas to life effortlessly.
         </motion.p>
 
-        {/* <motion.div variants={itemVariants}>
+        <motion.div variants={itemVariants}>
           <Waitlist />
-        </motion.div> */}
+        </motion.div>
       </motion.div>
     </section>
   )
