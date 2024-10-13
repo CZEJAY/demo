@@ -30,6 +30,9 @@
   .gradient-bg {
     @apply bg-gradient-to-r from-primary via-blue-400 to-indigo-400
   }
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-blue-400 to-indigo-400 bg-clip-text text-transparent
+  }
 
   /* Swiper Styles */
   /* Styles for the Swiper Paginations Start */

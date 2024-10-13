@@ -155,19 +155,19 @@ export const useCases = [
 
 export const reviews = [
   {
-    src: "jbells",
+    src: "user",
     altText: "JBells",
     reviewText:
       "This tool has streamlined our project proposals and client presentations. The templates are versatile and easy to customize, allowing us to maintain a consistent brand image. We've noticed an increase in client engagement and feedback since we started using it. It's an invaluable resource for our team.",
   },
   {
-    src: "",
+    src: "user",
     altText: "cynthia obi",
     reviewText:
       "As a small business owner, I needed a tool that could help me present my ideas clearly and with eye-catching marketing materials without breaking the bank. This platform has exceeded my expectations! It’s intuitive and offers great templates, allowing me to produce high-quality graphics and content effortlessly. It’s become my go-to resource!",
   },
   {
-    src: "",
+    src: "user",
     altText: "Mark John",
     reviewText:
       "I love how easy it is to use. Whether I’m creating a resume, planning a presentation or pitch deck, everything is straightforward and effective. It has made my work so much easier!",

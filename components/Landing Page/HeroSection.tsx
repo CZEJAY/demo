@@ -115,9 +115,9 @@ export function HeroSection() {
 
         <motion.h1 variants={itemVariants} className="text-4xl flex flex-col md:text-6xl font-bold mb-6">
         <span>
-          <span className='bg-gradient-to-r from-teal-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent'>AI</span>-Powered{' '}
+          <span className='gradient-text'>AI</span>-Powered{' '}
         </span>
-          <div className="inline-block bg-gradient-to-r from-teal-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+          <div className="inline-block gradient-text">
             <Typewriter
               options={{
                 strings: [

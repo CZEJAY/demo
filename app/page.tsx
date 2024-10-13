@@ -11,7 +11,6 @@ export default function Home() {
   return (
     <main className="mb-20 lg:mb-40">
       <HeroSection />
-      <div className=" space-y-20 lg:space-y-40 custom-container">
         <WhatWillYouCreate />
         <Reviews />
         <Features />
@@ -19,7 +18,6 @@ export default function Home() {
         <HowItWorks />
         <UseCases />
         <SolutionsForEveryone />
-      </div>
     </main>
   );
 }
