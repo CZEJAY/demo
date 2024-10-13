@@ -18,7 +18,7 @@ export function Teamwork() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="text-xl uppercase tracking-wider text-indigo-600 font-semibold"
+          className="text-2xl uppercase tracking-wider text-primary font-semibold"
         >
           Teamwork
         </motion.span>
@@ -26,7 +26,7 @@ export function Teamwork() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
-          className="text-2xl md:text-4xl font-bold text-gray-900"
+          className="text-xl md:text-4xl font-bold text-gray-900"
         >
           Team Collaboration with Patexa
         </motion.h2>

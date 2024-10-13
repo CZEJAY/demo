@@ -42,7 +42,7 @@ export function Reviews() {
         className="relative z-10 space-y-4 text-center"
       >
         <motion.span 
-          className="inline-block text-xl capitalize md:text-4xl bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text font-bold"
+          className="inline-block text-2xl capitalize md:text-4xl gradient-text"
           whileHover={{ scale: 1.05 }}
         >
           For Professionals Across The Globe
@@ -119,7 +119,7 @@ function CardItem({
         transition={{ duration: 0.5 }}
         className="relative flex flex-col justify-between h-full bg-white rounded-lg shadow-xl overflow-hidden"
       >
-        <div className="absolute top-4 left-4 text-purple-600 opacity-20">
+        <div className="absolute top-4 left-4 text-primary opacity-20">
           <Quote size={48} />
         </div>
         <div className="p-8 flex-grow">
@@ -148,7 +148,7 @@ function CardItem({
           </div>
         </div>
         <motion.div 
-          className="bg-gradient-to-r from-purple-600 to-indigo-600 h-2"
+          className="gradient-bg h-2"
           whileHover={{ height: '0.75rem' }}
           transition={{ type: 'spring', stiffness: 300 }}
         />

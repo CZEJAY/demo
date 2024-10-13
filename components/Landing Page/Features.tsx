@@ -17,7 +17,7 @@ export function Features() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="text-3xl uppercase tracking-wider text-indigo-600 font-semibold"
+          className="text-3xl uppercase tracking-wider text-primary font-semibold"
         >
           Features
         </motion.span>
@@ -38,7 +38,7 @@ export function Features() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, ease: 'easeOut', delay: idx * 0.1 }}
-            className="bg-gradient-to-br from-teal-400 to-teal-600 text-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300"
+            className="gradient-bg text-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300"
           >
             <h3 className="text-lg font-semibold mb-2">{item.label}</h3>
             <p className="text-sm">Discover how this feature can elevate your workflow and enhance your productivity.</p>

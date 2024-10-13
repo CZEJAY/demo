@@ -69,7 +69,7 @@ function CardItem({
             transition={{ duration: 0.4, delay: index * 0.2 + idx * 0.1 }}
             className="flex items-center space-x-3 bg-gray-50 p-2 rounded-lg shadow-sm"
           >
-            <span className="p-2 bg-indigo-100 text-indigo-600 shadow-inner rounded-full text-xl">
+            <span className="p-2 bg-indigo-100 text-primary shadow-inner rounded-full text-xl">
               {feature.emoji}
             </span>
             <p className="text-gray-700">{feature.text}</p>

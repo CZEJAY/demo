@@ -21,7 +21,7 @@ export default function SolutionsForEveryone() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="text-xl uppercase tracking-wider text-indigo-600 font-semibold"
+          className="text-2xl uppercase tracking-wider text-primary font-semibold"
         >
           Perfect for Every Industry and Professional
         </motion.span>
@@ -29,7 +29,7 @@ export default function SolutionsForEveryone() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
-          className="text-2xl md:text-4xl font-bold text-gray-900"
+          className="text-xl font-bold text-gray-900"
         >
           What can Patexa do for you?
         </motion.h2>
