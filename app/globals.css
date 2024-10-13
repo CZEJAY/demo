@@ -28,7 +28,7 @@
   }
 
   .gradient-bg {
-    @apply bg-gradient-to-r from-teal-400 via-blue-400 to-indigo-400
+    @apply bg-gradient-to-r from-primary via-blue-400 to-indigo-400
   }
 
   /* Swiper Styles */
