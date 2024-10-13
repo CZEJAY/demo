@@ -1,5 +1,4 @@
 import { Footer } from "@/components/shared/Footer";
-import { Header } from "@/components/shared/Header";
 import type { Metadata } from "next";
 import { postGroteskFont } from "./fonts/fonts";
 import "./globals.css";
@@ -8,6 +7,7 @@ import "./globals.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Header } from "@/components/shared/Header";
 
 export const metadata: Metadata = { 
   title: "Atoovis Create",
@@ -23,8 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased ${postGroteskFont.className}`}>
-        <Header />
-        <div className=" mt-16">{children}</div>
+        <Header/>
+        {children}
         <Footer />
       </body>
     </html>

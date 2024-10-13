@@ -9,7 +9,7 @@ import { WhatWillYouCreate } from "@/components/Landing Page/WhatWillYouCreate";
 
 export default function Home() {
   return (
-    <main className="min-h-screen mb-20 lg:mb-40">
+    <main className="mb-20 lg:mb-40">
       <HeroSection />
       <div className=" space-y-20 lg:space-y-40 custom-container">
         <WhatWillYouCreate />

@@ -1,89 +1,90 @@
-"use client";
-import { navLinks } from "@/lib/data";
-import { Logo } from "./Logo";
-// import { RxHamburgerMenu } from "react-icons/rx";
-import Link from "next/link";
-import { useState } from "react";
-// import { useLockBodyScroll } from "@/lib/hooks/useLockBodyScroll";
+'use client'
+
+import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { ChevronDown } from 'lucide-react'
+
+const navItems = [
+  { label: 'PRODUCTS', hasDropdown: true },
+  { label: "WHAT'S NEW", hasNotification: true },
+  { label: 'BOOK A DEMO' },
+  { label: 'PRICING' },
+]
 
 export function Header() {
-  const [open, setOpen] = useState(false);
-  // useLockBodyScroll(open);
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header className="fixed top-0 left-0 right-0 py-4 max-lg:px-4 lg:px-14 xl:px-28 bg-white shadow-md z-10 text-black border-b border-b-red-charcoal">
-      <div className="max-content flex items-center justify-between">
-        <Logo />
-
-        <div className="flex items-center space-x-8 md:hidden">
-          <NavToggle open={open} setOpen={setOpen} />
-        </div>
-
-        <div className="max-md:hidden">
-          <NavLinks />
-        </div>
-      </div>
-
-      <SideBar open={open} />
-    </header>
-  );
-}
-
-function NavLinks() {
-  return (
-    <ul className="flex max-md:flex-col max-md:space-y-5 md:items-center md:space-x-5">
-      {navLinks.map((item, idx) => (
-        <li key={idx} className="hover:text-deepTeal hover-effects">
-          <Link href={item.href}>{item.label}</Link>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-function NavToggle({
-  open,
-  setOpen,
-}: {
-  open: boolean;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}) {
-  return (
-    <div
-      className="size-10 relative focus:outline-none bg-silverGray/20 rounded-md"
-      onClick={() => setOpen(!open)}
-    >
-      <div className="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2">
-        <span
-          aria-hidden="true"
-          className={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${
-            open ? "rotate-45" : "-translate-y-1.5"
-          }`}
-        ></span>
-        <span
-          aria-hidden="true"
-          className={`block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out ${
-            open && "opacity-0"
-          }`}
-        ></span>
-        <span
-          aria-hidden="true"
-          className={`block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out ${
-            open ? "-rotate-45" : "translate-y-1.5"
-          }`}
-        ></span>
-      </div>
-    </div>
-  );
-}
-
-function SideBar({ open }: { open: boolean }) {
-  return (
-    <div
-      className={`hover-effects fixed top-16 left-0 right-0 bg-white h-screen py-5 px-4 md:hidden transform transition-transform duration-500 ease-in-out ${
-        open ? "translate-x-0" : "translate-x-full"
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+      className={`fixed top-0 left-0 right-0 z-50 px-3 transition-colors duration-300 ${
+        isScrolled ? 'bg-[#1a1a2e]' : 'bg-transparent'
       }`}
     >
-      <NavLinks />
-    </div>
-  );
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center">
+            <Logo />
+            <nav className="hidden md:block ml-10">
+              <ul className="flex space-x-4">
+                {navItems.map((item, index) => (
+                  <NavItem key={index} {...item} />
+                ))}
+              </ul>
+            </nav>
+          </div>
+          <div className="hidden md:block">
+            <button className="px-4 py-1 text-sm font-medium border-white border rounded-md text-white hover:text-gray-300 transition-colors">
+              SIGN IN
+            </button>
+            <button className="ml-4 px-4 py-1 text-sm font-medium text-white gradient-bg rounded-md  transition-colors">
+              GET STARTED
+            </button>
+          </div>
+          <div className="md:hidden">
+            <button className="text-white">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </motion.header>
+  )
+}
+
+function Logo() {
+  return (
+    <Link href="/" className="flex items-center">
+      <span className="text-white text-xl font-bold">Patexa</span>
+    </Link>
+  )
+}
+
+function NavItem({ label, hasDropdown, hasNotification }: { label: string; hasDropdown?: boolean; hasNotification?: boolean }) {
+  return (
+    <li className="relative">
+      <motion.div
+        className="flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-300 transition-colors cursor-pointer"
+        whileHover={{ y: -2 }}
+        transition={{ type: 'spring', stiffness: 300 }}
+      >
+        {label}
+        {hasDropdown && <ChevronDown className="ml-1 h-4 w-4" />}
+        {hasNotification && (
+          <span className="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-500 ring-2 ring-white" />
+        )}
+      </motion.div>
+    </li>
+  )
 }

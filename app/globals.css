@@ -27,6 +27,10 @@
     @apply max-w-[1200px] mx-auto;
   }
 
+  .gradient-bg {
+    @apply bg-gradient-to-r from-teal-400 via-blue-400 to-indigo-400
+  }
+
   /* Swiper Styles */
   /* Styles for the Swiper Paginations Start */
 
@@ -48,3 +52,70 @@
   }
   /* Styles for the Swiper Navigtions End */
 }
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 195 63% 55%; 
+    --primary-foreground: 195 100% 97%; 
+    --secondary: 195 12% 90%; 
+    --secondary-foreground: 195 10% 15%;
+    --muted: 195 12% 90%; 
+    --muted-foreground: 195 5% 40%;
+    --accent: 195 12% 90%;
+    --accent-foreground: 195 10% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 195 10% 85%;
+    --input: 195 10% 85%;
+    --ring: 195 63% 55%;
+    --radius: 0.5rem;
+    --chart-1: 195 63% 55%; 
+    --chart-2: 173 58% 39%; 
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%; 
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 0 0% 95%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 195 63% 55%; 
+    --primary-foreground: 195 100% 97%; 
+    --secondary: 195 15% 20%; 
+    --secondary-foreground: 0 0% 98%;
+    --muted: 195 15% 15%; 
+    --muted-foreground: 195 10% 65%;
+    --accent: 195 10% 20%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 195 15% 20%;
+    --input: 195 15% 20%;
+    --ring: 195 63% 55%;
+    --chart-1: 195 63% 55%; 
+    --chart-2: 173 58% 39%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
