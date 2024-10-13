@@ -134,11 +134,11 @@ export function HeroSection() {
           Creation Platform
         </motion.h1>
 
-        <motion.p variants={itemVariants} className="text-lg md:text-xl mb-8 p-2">
+        {/* <motion.p variants={itemVariants} className="text-lg md:text-xl mb-8 p-2">
           Beautiful presentations, documents, and websites. No design or coding skills required.
           <br />
           Bring your ideas to life effortlessly.
-        </motion.p>
+        </motion.p> */}
 
         <motion.div variants={itemVariants}>
           <Waitlist />
