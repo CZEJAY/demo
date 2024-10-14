@@ -44,7 +44,7 @@ export function Header() {
             </nav>
           </div>
           <div className="hidden md:block">
-            <button className="px-4 py-1 text-sm font-medium border-white border rounded-md text-white hover:text-gray-300 transition-colors">
+            <button className="px-4 py-1 text-sm font-medium border-white border-palette text-white hover:text-gray-300 transition-colors">
               SIGN IN
             </button>
             <button className="ml-4 px-4 py-1 text-sm font-medium text-white gradient-bg rounded-md  transition-colors">

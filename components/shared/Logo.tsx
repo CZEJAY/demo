@@ -34,11 +34,7 @@ export function Logo({ isScrolled }: { isScrolled?: boolean }) {
           key={index}
           custom={index}
           variants={letterVariants}
-          className={`inline-block ${
-            isScrolled
-              ? 'gradient-text'
-              : 'text-white'
-          }`}
+          className={`inline-block text-white`}
           style={{
             textShadow: isScrolled ? 'none' : '0 2px 4px rgba(0,0,0,0.1)',
           }}

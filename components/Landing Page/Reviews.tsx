@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer"
 import { Quote } from 'lucide-react'
 
 const BackgroundPattern = () => (
-  <div className="absolute inset-0 overflow-hidden bg-purple-900/70 opacity-10">
+  <div className="absolute inset-0 overflow-hidden bg-sky-900/70 opacity-10">
     <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <pattern id="hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse" patternTransform="scale(2) rotate(0)">
@@ -46,7 +46,7 @@ export function Reviews() {
         >
           For Professionals Across The Globe
         </motion.span>
-        <h2 className="text-lg  text-gray-900 ">
+        <h2 className="text-lg  text-gray-800 ">
           Join the professionals who depend on us for success.
         </h2>
         <p className="text-lg text-gray-600">

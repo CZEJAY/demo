@@ -106,7 +106,7 @@ function FooterLink({
       transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
       className="text-sm space-y-4"
     >
-      <span className="text-primary uppercase font-medium tracking-wide">
+      <span className="gradient-text text-xl uppercase font-medium tracking-wide">
         {name}
       </span>
       <ul className="space-y-2">
