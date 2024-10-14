@@ -168,7 +168,7 @@ export const teamWork = [
     label: "Shared Branded Templates",
     content:
       "Teams can create and store-branded templates for consistent messaging and design across all materials. This not only saves time but also helps maintain a cohesive brand identity in presentations, reports, and marketing content.",
-    src: "branded",
+    src: "share",
   },
 ];
 

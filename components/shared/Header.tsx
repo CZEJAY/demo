@@ -1,16 +1,36 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, createContext, useContext } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
-import { ChevronDown, X } from 'lucide-react'
+import { ChevronDown, X, Globe } from 'lucide-react'
 import { Logo } from './Logo'
 
+const languages = [
+  { code: 'en', name: 'English' },
+  { code: 'es', name: 'Español' },
+  { code: 'fr', name: 'Français' },
+  { code: 'de', name: 'Deutsch' },
+  { code: 'zh', name: '中文' },
+]
+
+const LanguageContext = createContext({
+  language: 'en',
+  setLanguage: (code: string) => {},
+})
+
+export function LanguageProvider({ children }: { children: React.ReactNode }) {
+  const [language, setLanguage] = useState('en')
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      {children}
+    </LanguageContext.Provider>
+  )
+}
+
 const navItems = [
-  { label: 'PRODUCTS', hasDropdown: true },
-  { label: "WHAT'S NEW", hasNotification: true },
-  { label: 'BOOK A DEMO' },
-  { label: 'PRICING' },
+  { label: 'PRICING', hasNotification: true },
 ]
 
 export function Header() {
@@ -24,7 +44,7 @@ export function Header() {
   }, [])
 
   return (
-    <>
+    <LanguageProvider>
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -39,6 +59,7 @@ export function Header() {
               <Logo isScrolled={isScrolled} />
               <nav className="hidden md:block ml-10">
                 <ul className="flex space-x-4">
+                  <LanguageDropdown />
                   {navItems.map((item, index) => (
                     <NavItem key={index} {...item} />
                   ))}
@@ -72,7 +93,51 @@ export function Header() {
           />
         )}
       </AnimatePresence>
-    </>
+    </LanguageProvider>
+  )
+}
+
+function LanguageDropdown() {
+  const [isOpen, setIsOpen] = useState(false)
+  const { language, setLanguage } = useContext(LanguageContext)
+
+  return (
+    <li className="relative">
+      <motion.div
+        className="flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-300 transition-colors cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
+        whileHover={{ y: -2 }}
+        transition={{ type: 'spring', stiffness: 300 }}
+      >
+        <Globe className="mr-2 h-4 w-4" />
+        {languages.find(lang => lang.code === language)?.name}
+        <ChevronDown className="ml-1 h-4 w-4" />
+      </motion.div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.ul
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
+          >
+            {languages.map((lang) => (
+              <li
+                key={lang.code}
+                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100 cursor-pointer"
+                onClick={() => {
+                  setLanguage(lang.code)
+                  setIsOpen(false)
+                }}
+              >
+                {lang.name}
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
+    </li>
   )
 }
 
@@ -95,6 +160,8 @@ function NavItem({ label, hasDropdown, hasNotification }: { label: string; hasDr
 }
 
 function MobileNav({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  const { language, setLanguage } = useContext(LanguageContext)
+
   return (
     <motion.div
       initial={{ y: '100%' }}
@@ -112,11 +179,24 @@ function MobileNav({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }
         </div>
         <nav className="flex-grow">
           <ul className="flex flex-col space-y-4 p-4">
+            <li className="text-white text-lg font-medium">
+              <select
+                value={language}
+                onChange={(e) => setLanguage(e.target.value)}
+                className="bg-transparent text-white border-white border rounded px-2 py-1"
+              >
+                {languages.map((lang) => (
+                  <option key={lang.code} value={lang.code}>
+                    {lang.name}
+                  </option>
+                ))}
+              </select>
+            </li>
             {navItems.map((item, index) => (
               <li key={index} className="text-white text-lg font-medium">
                 <Link href="#" className="flex items-center">
                   {item.label}
-                  {item.hasDropdown && <ChevronDown className="ml-2 h-5 w-5" />}
+                  {/* {item.hasDropdown && <ChevronDown className="ml-2 h-5 w-5" />} */}
                   {item.hasNotification && (
                     <span className="ml-2 h-2 w-2 rounded-full bg-red-500" />
                   )}
