@@ -1,49 +1,65 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { reviews } from "@/lib/data"
-import Image from "next/image"
-import { Navigation, Pagination } from "swiper/modules"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { motion, AnimatePresence } from 'framer-motion'
-import { useInView } from "react-intersection-observer"
-import { Quote } from 'lucide-react'
+import { useState } from "react";
+import { reviews } from "@/lib/data";
+import Image from "next/image";
+import { Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Quote } from "lucide-react";
 
 const BackgroundPattern = () => (
   <div className="absolute inset-0 overflow-hidden bg-sky-900/70 opacity-10">
     <svg className="absolute w-full h-full" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <pattern id="hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse" patternTransform="scale(2) rotate(0)">
-          <path d="M25,17.3 L38.5,8.7 L38.5,26 L25,34.6 L11.5,26 L11.5,8.7z" fill="none" stroke="#000000" strokeWidth="1"/>
+        <pattern
+          id="hexagons"
+          width="50"
+          height="43.4"
+          patternUnits="userSpaceOnUse"
+          patternTransform="scale(2) rotate(0)"
+        >
+          <path
+            d="M25,17.3 L38.5,8.7 L38.5,26 L25,34.6 L11.5,26 L11.5,8.7z"
+            fill="none"
+            stroke="#000000"
+            strokeWidth="1"
+          />
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill="url(#hexagons)" />
     </svg>
   </div>
-)
+);
 
 export function Reviews() {
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [activeIndex, setActiveIndex] = useState(0);
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
 
   return (
-    <section ref={ref} className="relative max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8 space-y-12 overflow-hidden">
+    <section
+      ref={ref}
+      className="relative max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8 space-y-12 overflow-hidden"
+    >
       <BackgroundPattern />
-      <motion.div 
+      <motion.div
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={{
           hidden: { opacity: 0, y: 50 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5, ease: "easeOut" },
+          },
         }}
         className="relative z-10 space-y-4 text-center"
       >
-        <motion.span 
-          className="inline-block text-2xl font-bold capitalize md:text-4xl gradient-text"
-        >
+        <motion.span className="inline-block text-2xl font-bold capitalize md:text-4xl gradient-text">
           For Professionals Across The Globe
         </motion.span>
         <h2 className="text-lg  text-gray-800 ">
@@ -91,7 +107,7 @@ export function Reviews() {
         </Swiper>
       </div>
     </section>
-  )
+  );
 }
 
 function CardItem({
@@ -101,36 +117,38 @@ function CardItem({
   index,
   activeIndex,
 }: {
-  src: string
-  altText: string
-  reviewText: string
-  index: number
-  activeIndex: number
+  src: string;
+  altText: string;
+  reviewText: string;
+  index: number;
+  activeIndex: number;
 }) {
-  const isActive = index === activeIndex
+  const isActive = index === activeIndex;
 
   return (
     <AnimatePresence>
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.8 }}
         transition={{ duration: 0.5 }}
-        className="relative flex flex-col justify-between h-full bg-white rounded-lg shadow-xl overflow-hidden"
+        className="relative flex flex-col  justify-between min-h-[400px]  h-full bg-white rounded-lg shadow-xl overflow-hidden"
       >
         <div className="absolute top-4 left-4 text-primary opacity-20">
           <Quote size={48} />
         </div>
-        <div className="p-8 flex-grow">
-          <motion.p 
-            className="text-gray-700 mb-6 relative z-10 text-lg leading-relaxed"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            "{reviewText}"
-          </motion.p>
-          <div className="flex items-center">
+        <div className="flex flex-col p-3 justify-between mt-20 w-full h-full">
+          <div className="">
+            <motion.p
+              className="text-gray-700 mb-6 relative z-10 text-sm md:text-md "
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              "{reviewText}"
+            </motion.p>
+          </div>
+          <div className="absolute bottom-10 left-0 w-full flex  mt-auto gap-x-4">
             <div className={`mr-4 ${!src && "invisible"}`}>
               <Image
                 src={`/assets/${src}.png`}
@@ -140,18 +158,20 @@ function CardItem({
                 className="rounded-full object-cover"
               />
             </div>
-            <div>
-              <h3 className="font-semibold text-gray-900">{altText}</h3>
+            <div className="">
+              <h3 className="font-semibold text-gray-900 capitalize">
+                {altText}
+              </h3>
               <p className="text-sm text-gray-500">Satisfied Customer</p>
             </div>
           </div>
         </div>
-        <motion.div 
+        <motion.div
           className="gradient-bg h-2"
-          whileHover={{ height: '0.75rem' }}
-          transition={{ type: 'spring', stiffness: 300 }}
+          whileHover={{ height: "0.75rem" }}
+          transition={{ type: "spring", stiffness: 300 }}
         />
       </motion.div>
     </AnimatePresence>
-  )
+  );
 }

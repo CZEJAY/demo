@@ -92,7 +92,7 @@ function LanguageDropdown() {
   return (
     <li className="relative">
       <motion.div
-        className="flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-300 transition-colors cursor-pointer"
+        className="flex items-center px-3 py-2 text-lg  font-medium text-white hover:text-gray-300 transition-colors cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ y: -2 }}
         transition={{ type: 'spring', stiffness: 300 }}
@@ -134,7 +134,7 @@ function NavItem({ label, hasNotification }: { label: string; hasNotification?: 
   return (
     <li className="relative">
       <motion.div
-        className="flex items-center px-3 py-2 text-sm font-medium text-white hover:text-gray-300 transition-colors cursor-pointer"
+        className="flex items-center px-3 py-2 text-lg font-medium text-white hover:text-gray-300 transition-colors cursor-pointer"
         whileHover={{ y: -2 }}
         transition={{ type: 'spring', stiffness: 300 }}
       >
@@ -168,9 +168,7 @@ function MobileNav({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }
         </div>
         <nav className="flex-grow">
           <ul className="flex flex-col space-y-4 p-4">
-            <li className="text-white -ml-[10px] text-lg font-medium">
-            <LanguageDropdown />
-
+            <li className="">
               {/* <select
                 value={language}
                 onChange={(e) => setLanguage(e.target.value as Language)}
@@ -193,6 +191,10 @@ function MobileNav({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }
                 </Link>
               </li>
             ))}
+            <li className='text-white -ml-[12px] text-lg font-medium'>
+
+            <LanguageDropdown />
+            </li>
           </ul>
         </nav>
         <div className="p-4 space-y-4">
