@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 
 export function HowItWorks() {
@@ -31,6 +32,15 @@ export function HowItWorks() {
         transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
         className="relative hidden md:block bg-gradient-to-br from-gray-100 to-gray-200 shadow-md rounded-md overflow-hidden"
       >
+       <div className="absolute items-center justify-center w-full h-full flex inset-0 ">
+       <Image
+          className="w-28 h-16 object-cover"
+          src="/assets/delivery.webp"
+          alt="How it works background"
+          width={100}
+          height={100}
+          />
+       </div>
         {/* Animated SVG Background */}
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <svg
