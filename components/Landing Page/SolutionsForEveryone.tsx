@@ -86,7 +86,7 @@ function CardItem({
       className="bg-gradient-to-br from-white to-gray-50 shadow-lg rounded-lg p-6 flex items-center space-x-6 hover:shadow-xl transform transition-transform duration-300"
     >
       <Image
-        src={`/assets/${imageSrc}.jpg`}
+        src={`/assets/${imageSrc}.png`}
         width={100}
         height={100}
         alt={altText}

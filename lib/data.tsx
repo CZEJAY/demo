@@ -1,6 +1,95 @@
 import { FaFacebookF, FaTiktok } from "react-icons/fa";
 import { GrLinkedin, GrInstagram, GrTwitter } from "react-icons/gr";
 
+
+import React from 'react'
+import { 
+  Zap, 
+  Layout, 
+  Rocket, 
+  FolderOpen, 
+  Scissors, 
+  FileOutput, 
+  Smartphone, 
+  BarChart2, 
+  Users, 
+  Image, 
+  LineChart, 
+  File 
+} from 'lucide-react'
+
+export const useCases = [
+  {
+    title: "Your Personal AI Design & Copywriting Assistant",
+    features: [
+      {
+        icon: React.createElement(Zap),
+        text: "Get instant, personalized text and visuals.",
+      },
+      {
+        icon: React.createElement(Layout),
+        text: "Professional layouts are applied in one click.",
+      },
+      {
+        icon: React.createElement(Rocket),
+        text: "Rewrite or autocomplete your content fast to stay ahead.",
+      },
+    ],
+  },
+  {
+    title: "Seamless Design & Copywriting Updates for Quick Edits",
+    features: [
+      {
+        icon: React.createElement(FolderOpen),
+        text: "Easily import files or presentations.",
+      },
+      {
+        icon: React.createElement(Scissors),
+        text: "Copy and paste text with zero hassle.",
+      },
+      {
+        icon: React.createElement(FileOutput),
+        text: "Export polished PDFs and PPTs instantly.",
+      },
+    ],
+  },
+  {
+    title: "Share, Publish, and Track—Anywhere",
+    features: [
+      {
+        icon: React.createElement(Smartphone),
+        text: "Ensure your content looks great on any device.",
+      },
+      {
+        icon: React.createElement(BarChart2),
+        text: "See what works with real-time analytics.",
+      },
+      {
+        icon: React.createElement(Users),
+        text: "Collaborate live with your team for fast feedback and updates.",
+      },
+    ],
+  },
+  {
+    title: "Collaborate live with your team for fast feedback and updates.",
+    features: [
+      {
+        icon: React.createElement(Image),
+        text: "Drag-and-drop galleries, videos, and embeds.",
+      },
+      {
+        icon: React.createElement(LineChart),
+        text: "Turn your data into easy-to-read charts and tables.",
+      },
+      {
+        icon: React.createElement(File),
+        text: "Start with templates that save time—just add your touch.",
+      },
+    ],
+  },
+]
+
+
 export const addressLinks = [
   { label: "701 Tillery Street, Austin, Texas, United States", href: "#" },
 ];
@@ -82,76 +171,7 @@ export const teamWork = [
     src: "branded",
   },
 ];
-export const useCases = [
-  {
-    title: "Your Personal AI Design & Copywriting Assistant",
-    features: [
-      {
-        emoji: "⚡️",
-        text: "Get instant, personalized text and visuals.",
-      },
-      {
-        emoji: "💡",
-        text: "Professional layouts are applied in one click.",
-      },
-      {
-        emoji: "🚀",
-        text: "Rewrite or autocomplete your content fast to stay ahead.",
-      },
-    ],
-  },
-  {
-    title: "Seamless Design & Copywriting Updates for Quick Edits",
-    features: [
-      {
-        emoji: "📂",
-        text: "Easily import files or presentations.",
-      },
-      {
-        emoji: "✂️",
-        text: "Copy and paste text with zero hassle.",
-      },
-      {
-        emoji: "📄",
-        text: "Export polished PDFs and PPTs instantly.",
-      },
-    ],
-  },
-  {
-    title: "Share, Publish, and Track—Anywhere",
-    features: [
-      {
-        emoji: "📱",
-        text: "Ensure your content looks great on any device.",
-      },
-      {
-        emoji: "📊",
-        text: "See what works with real-time analytics.",
-      },
-      {
-        emoji: "🤝",
-        text: "Collaborate live with your team for fast feedback and updates.",
-      },
-    ],
-  },
-  {
-    title: "Collaborate live with your team for fast feedback and updates.",
-    features: [
-      {
-        emoji: "🖼️",
-        text: "Drag-and-drop galleries, videos, and embeds.",
-      },
-      {
-        emoji: "📈",
-        text: "Turn your data into easy-to-read charts and tables.",
-      },
-      {
-        emoji: "📝",
-        text: "Start with templates that save time—just add your touch.",
-      },
-    ],
-  },
-];
+
 
 export const reviews = [
   {
