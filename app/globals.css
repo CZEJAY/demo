@@ -38,11 +38,11 @@
   /* Styles for the Swiper Paginations Start */
 
   .mySwiper .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-    @apply bg-purple-500 opacity-30;
+    @apply gradient-text opacity-30;
   }
 
   .mySwiper .swiper-pagination-bullet-active {
-    @apply bg-purple-500 opacity-100;
+    @apply gradient-bg opacity-100;
   }
 
   /* Styles for the Swiper Paginations End */
