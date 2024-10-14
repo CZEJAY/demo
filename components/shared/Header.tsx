@@ -29,7 +29,7 @@ export function Header() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-        className={`fixed top-0 w-full mx-auto left-0 right-0 z-50 px-3 transition-colors duration-300 ${
+        className={`fixed top-0 w-full mx-auto left-0 right-0 z-50 shadow-xl px-3 transition-colors duration-300 ${
           isScrolled ? 'bg-gradient-to-br from-gray-900 to-gray-800' : 'bg-transparent'
         }`}
       >
