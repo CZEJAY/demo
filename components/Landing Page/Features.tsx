@@ -41,7 +41,7 @@ export function Features() {
             className="gradient-bg text-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300"
           >
             <h3 className="text-lg font-semibold mb-2">{item.label}</h3>
-            <p className="text-sm">Discover how this feature can elevate your workflow and enhance your productivity.</p>
+            <p className="text-sm">{item.text}</p>
           </motion.li>
         ))}
       </ul>

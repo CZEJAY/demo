@@ -123,12 +123,12 @@ export const navLinks = [
 ];
 
 export const features = [
-  { label: "AI-Powered Design Assistant " },
-  { label: "Branded Content, Ideas Generator & Optimizer " },
-  { label: "Drag-and-Drop Editor" },
-  { label: "Real-Time Collaborative Tools  " },
-  { label: "No-Code Customizable Templates " },
-  { label: "Data Visualization  " },
+  { label: "AI-Powered Design Assistant ", text: " Automates design suggestions for quick, professional results." },
+  { label: "Branded Content, Ideas Generator & Optimizer ", text: "Creates and optimizes ideas to match your brand." },
+  { label: "Drag-and-Drop Editor", text: "Easily move elements to design without coding."},
+  { label: "Real-Time Collaborative Tools  ", text: "Share and collaborate with team members in real-time." },
+  { label: "No-Code Customizable Templates ", text: "Create custom templates to save time and ensure consistency." },
+  { label: "Data Visualization  ", text: "Create engaging data visualizations to showcase your results." },
 ];
 
 export const whatWillYouCreate = [
