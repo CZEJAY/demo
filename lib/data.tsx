@@ -138,15 +138,15 @@ export const whatWillYouCreate = [
     src: "presentation",
   },
   {
-    label: "Website",
-    content: "Improve your website with great design and copy to enhance user experience and increase conversions.",
-    src: "website",
-  },
-  {
     label: "Documents",
     content:
       "Create professional resumes, reports, proposals, and white papers.",
     src: "document",
+  },
+  {
+    label: "Website",
+    content: "Improve your website with great design and copy to enhance user experience and increase conversions.",
+    src: "website",
   },
   {
     label: "Marketing Content and Visuals",
