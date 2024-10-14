@@ -4,11 +4,12 @@ import { useState } from 'react'
 import { useForm, ValidationError } from '@formspree/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Sparkles, Send, CheckCircle } from 'lucide-react'
+import { useTranslation } from '@/hooks/useTranslation'
 
 export function Waitlist() {
   const [state, handleSubmit] = useForm('xkgwdbqz')
   const [email, setEmail] = useState('')
-
+  const {t} = useTranslation()
   return (
     <AnimatePresence mode="wait">
       {state.succeeded ? (
@@ -80,7 +81,7 @@ export function Waitlist() {
                 <span>Joining...</span>
               </div>
             ) : (
-              'Join the Waitlist'
+              t("wait_list")
             )}
           </motion.button>
         </motion.form>

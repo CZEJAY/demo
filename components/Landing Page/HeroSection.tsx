@@ -5,6 +5,7 @@ import { motion, useAnimation, useInView } from 'framer-motion'
 import Typewriter from 'typewriter-effect'
 import { Waitlist } from '@/components/Landing Page/Waitlist'
 import { Header } from '../shared/Header'
+import { useTranslation } from '@/hooks/useTranslation'
 
 const StarBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -99,6 +100,8 @@ export function HeroSection() {
     }
   }
 
+  const {t} = useTranslation()
+  
   return (
       <section className="relative flex items-center justify-center min-h-screen p-4 pt-2 md:pt-24  overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
       <StarBackground />
@@ -110,12 +113,12 @@ export function HeroSection() {
         className="relative z-10 max-w-4xl text-center text-white"
       >
         <motion.span variants={itemVariants} className="text-xl text-white rounded-lg md:tracking-wide mb-4 block">
-          Experience a new way to share your stories and ideas.
+          {t('experience')}
         </motion.span>
 
         <motion.h1 variants={itemVariants} className="text-4xl flex flex-col md:text-6xl font-bold mb-6">
         <span>
-          <span className='gradient-text'>AI</span>-Powered{' '}
+          <span className='gradient-text'>{t('ai')}</span>-{t('powered')}{' '}
         </span>
           <div className="inline-block gradient-text">
             <Typewriter
@@ -133,7 +136,7 @@ export function HeroSection() {
               }}
             />
           </div>
-          Creation Platform
+          {t('platform')}
         </motion.h1>
 
         {/* <motion.p variants={itemVariants} className="text-lg md:text-xl mb-8 p-2">

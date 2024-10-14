@@ -38,7 +38,7 @@
   /* Styles for the Swiper Paginations Start */
 
   .mySwiper .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-    @apply gradient-text opacity-30;
+    @apply gradient-bg opacity-30;
   }
 
   .mySwiper .swiper-pagination-bullet-active {
