@@ -7,13 +7,13 @@ import { AnimatePresence, motion } from "framer-motion"
 import { ChevronDown, Globe } from "lucide-react"
 import { languages } from "@/lib/utils"
 
-export default function LanguageDropdown({ isTop }: { isTop?: boolean }) {
+export default function LanguageDropdown({ isTop, className }: { isTop?: boolean, className?: string }) {
   const [isOpen, setIsOpen] = useState(false)
   const { language, setLanguage } = useContext(LanguageContext)
   const { t } = useTranslation()
 
   return (
-    <li className="relative list-none">
+    <li className={`relative list-none ${className}`}>
       <motion.div
         className="flex items-center px-3 py-2 text-lg font-medium text-white hover:text-gray-300 transition-colors cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}

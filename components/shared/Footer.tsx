@@ -57,7 +57,9 @@ export function Footer() {
         <FooterLink name="company" content={companyLinks} inView={inView} />
         <FooterLink name="Address" content={addressLinks} inView={inView} />
         <FooterLink name="Contact Us" content={contactLink} inView={inView} />
-        <LanguageDropdown isTop={true} />
+        <div className="w-40 -ml-3">
+          <LanguageDropdown className="" isTop={true} />
+        </div>
       </div>
 
       <div className="lg:hidden mb-5">
