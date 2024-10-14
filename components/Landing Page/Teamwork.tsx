@@ -26,7 +26,7 @@ export function Teamwork() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
-          className="text-xl md:text-4xl font-bold text-gray-900"
+          className="text-xl font-bold text-gray-800"
         >
           Team Collaboration with Patexa
         </motion.h2>
@@ -84,7 +84,7 @@ function CardItem({
       </div>
 
       <Image
-        src={`/assets/${src}.jpg`}
+        src={`/assets/${src}.png`}
         width={150}
         height={150}
         className="rounded-md object-cover h-[10rem] w-[10rem] z-10"

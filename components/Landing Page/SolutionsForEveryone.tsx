@@ -94,7 +94,7 @@ function CardItem({
       />
 
       <div className="flex flex-col">
-        <span className="text-xl font-medium text-gray-800">{title}</span>
+        <span className="text-xl font-medium text-primary">{title}</span>
         <p className="text-gray-600">{description}</p>
       </div>
     </motion.div>
