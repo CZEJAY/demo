@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Header } from "@/components/shared/Header";
 import Providers from "@/context";
+import { LanguageProvider } from "@/context/languageProvider";
 
 export const metadata: Metadata = {
   title: "Atoovis Create",
@@ -24,11 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased ${postGroteskFont.className}`}>
-        <Providers>
+        <LanguageProvider>
           <Header />
           {children}
           <Footer />
-        </Providers>
+        </LanguageProvider>
       </body>
     </html>
   );
