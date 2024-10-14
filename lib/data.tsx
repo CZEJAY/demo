@@ -196,7 +196,7 @@ export const reviews = [
 
 export const solutions = [
   {
-    imageSrc: "entrepreneur",
+    imageSrc: "Entrepreneur",
     altText: "Entrepreneurs",
     title: "Entrepreneurs",
     description:
