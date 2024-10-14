@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
+import { Logo } from './Logo'
 
 const navItems = [
   { label: 'PRODUCTS', hasDropdown: true },
@@ -26,14 +27,14 @@ export function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-      className={`fixed top-0 left-0 right-0 z-50 px-3 transition-colors duration-300 ${
+      className={`fixed top-5 max-w-5xl rounded-full mx-auto left-0 right-0 z-50 px-3 transition-colors duration-300 ${
         isScrolled ? 'bg-gradient-to-br from-gray-900 to-gray-800' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Logo />
+            <Logo isScrolled={isScrolled} />
             <nav className="hidden md:block ml-10">
               <ul className="flex space-x-4">
                 {navItems.map((item, index) => (
@@ -63,13 +64,6 @@ export function Header() {
   )
 }
 
-function Logo() {
-  return (
-    <Link href="/" className="flex items-center">
-      <span className="text-white text-3xl font-bold">Patexa</span>
-    </Link>
-  )
-}
 
 function NavItem({ label, hasDropdown, hasNotification }: { label: string; hasDropdown?: boolean; hasNotification?: boolean }) {
   return (

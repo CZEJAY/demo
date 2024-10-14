@@ -100,7 +100,7 @@ export function HeroSection() {
   }
 
   return (
-      <section className="relative flex items-center justify-center min-h-screen p-4  overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+      <section className="relative flex items-center justify-center min-h-screen p-4 pt-2 md:pt-24  overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
       <StarBackground />
       <motion.div
         ref={ref}
