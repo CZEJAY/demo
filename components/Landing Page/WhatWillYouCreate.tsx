@@ -163,7 +163,7 @@ function CardItem({
             width={48}
             height={48}
             alt={title}
-            className="w-12 h-12"
+            className="w-12 h-12 object-cover"
           />
         </div>
         <h3 className="text-2xl font-semibold text-left text-gray-900">{title}</h3>
