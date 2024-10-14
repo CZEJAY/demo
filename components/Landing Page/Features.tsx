@@ -17,7 +17,7 @@ export function Features() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="text-3xl uppercase tracking-wider text-primary font-semibold"
+          className="text-3xl uppercase tracking-wider gradient-text font-semibold"
         >
           Features
         </motion.span>

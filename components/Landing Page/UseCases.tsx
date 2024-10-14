@@ -55,7 +55,7 @@ function CardItem({
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ duration: 0.5, delay: index * 0.15 }}
-        className="text-2xl font-semibold text-primary"
+        className="text-2xl font-semibold gradient-text"
       >
         {title}
       </motion.h2>

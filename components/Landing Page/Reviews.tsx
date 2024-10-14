@@ -42,12 +42,11 @@ export function Reviews() {
         className="relative z-10 space-y-4 text-center"
       >
         <motion.span 
-          className="inline-block text-2xl capitalize md:text-4xl gradient-text"
-          whileHover={{ scale: 1.05 }}
+          className="inline-block text-2xl font-bold capitalize md:text-4xl gradient-text"
         >
           For Professionals Across The Globe
         </motion.span>
-        <h2 className="text-lg font-semibold text-gray-900 ">
+        <h2 className="text-lg  text-gray-900 ">
           Join the professionals who depend on us for success.
         </h2>
         <p className="text-lg text-gray-600">

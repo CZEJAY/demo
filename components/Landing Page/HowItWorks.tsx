@@ -17,7 +17,7 @@ export function HowItWorks() {
         transition={{ duration: 0.5, ease: 'easeOut' }}
         className="space-y-4"
       >
-        <h2 className="text-2xl font-bold text-primary">
+        <h2 className="text-2xl font-bold gradient-text">
           Create, Share, and Impress—Fast
         </h2>
         <p className="text-gray-600 text-lg">
