@@ -8,8 +8,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Header } from "@/components/shared/Header";
+import Providers from "@/context";
 
-export const metadata: Metadata = { 
+export const metadata: Metadata = {
   title: "Atoovis Create",
   description:
     "Create beautiful presentations, pitch decks, resumes, websites, and documents. No design, writing, or coding skills needed. Bring your ideas to life like never before.",
@@ -23,9 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`antialiased ${postGroteskFont.className}`}>
-        <Header/>
-        {children}
-        <Footer />
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
