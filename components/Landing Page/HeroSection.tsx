@@ -6,6 +6,7 @@ import Typewriter from 'typewriter-effect'
 import { Waitlist } from '@/components/Landing Page/Waitlist'
 import { Header } from '../shared/Header'
 import { useTranslation } from '@/hooks/useTranslation'
+import { TranslationKey } from '@/lib/translations'
 
 const StarBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -130,7 +131,7 @@ export function HeroSection() {
                   'Resumes',
                   'Websites',
                   'Documents',
-                ],
+                ].map((val, i) => t(val as TranslationKey)),
                 autoStart: true,
                 loop: true,
               }}

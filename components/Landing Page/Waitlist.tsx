@@ -44,7 +44,7 @@ export function Waitlist() {
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Your Email"
+              placeholder={t("yourEmail")}
               className="w-full text-white bg-transparent px-4 py-3 border-2 border-sky-300 rounded-full focus:outline-none focus:border-sky-500  transition-colors duration-300"
               required
             />
