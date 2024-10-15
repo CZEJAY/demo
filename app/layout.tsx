@@ -12,7 +12,7 @@ import Providers from "@/context";
 import { LanguageProvider } from "@/context/languageProvider";
 
 export const metadata: Metadata = {
-  title: "Atoovis Create",
+  title: "Patexa - Create Presentations, Pitch Decks, Resumes, and Documents.",
   description:
     "Create beautiful presentations, pitch decks, resumes, websites, and documents. No design, writing, or coding skills needed. Bring your ideas to life like never before.",
 };
