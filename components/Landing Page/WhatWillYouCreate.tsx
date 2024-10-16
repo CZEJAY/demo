@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import Image from "next/image"
 import { motion } from 'framer-motion'
 import { useInView } from "react-intersection-observer"
 import { whatWillYouCreate } from "@/lib/data"
@@ -158,7 +157,7 @@ function CardItem({
       <div className="absolute inset-1 rounded-lg bg-white" />
       <div className="relative z-10 flex flex-col items-start p-8 space-y-4">
         <div className="bg-white rounded-full p-3 shadow-lg">
-          <Image
+          <img
             src={`/assets/${src}.png`}
             width={48}
             height={48}

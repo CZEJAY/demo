@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image";
 import { teamWork } from "@/lib/data";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -83,7 +82,7 @@ function CardItem({
         </svg>
       </div>
 
-      <Image
+      <img
         src={`/assets/${src}.png`}
         width={150}
         height={150}

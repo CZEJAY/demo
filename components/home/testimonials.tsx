@@ -7,7 +7,6 @@ import {
   PanInfo,
 } from "framer-motion";
 import { Quote } from "lucide-react";
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const testimonials = [
@@ -36,7 +35,7 @@ type Testimonial = (typeof testimonials)[0];
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
   <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col h-full">
     <div className="flex items-center mb-4">
-      <Image
+      <img
         src={testimonial.image}
         alt={testimonial.name}
         width={50}

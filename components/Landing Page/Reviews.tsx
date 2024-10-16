@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { reviews } from "@/lib/data";
-import Image from "next/image";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -150,7 +149,7 @@ function CardItem({
           </div>
           <div className="absolute bottom-10 left-0 w-full flex  mt-auto gap-x-4">
             <div className={`mr-4 ${!src && "invisible"}`}>
-              <Image
+              <img
                 src={`/assets/${src}.png`}
                 width={48}
                 height={48}

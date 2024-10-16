@@ -1,7 +1,6 @@
 'use client'
 
 import { solutions } from "@/lib/data";
-import Image from "next/image";
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -85,7 +84,7 @@ function CardItem({
       transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.1 }}
       className="bg-gradient-to-br from-white to-gray-50 shadow-lg rounded-lg p-6 flex items-center space-x-6 hover:shadow-xl transform transition-transform duration-300"
     >
-      <Image
+      <img
         src={`/assets/${imageSrc}.png`}
         width={100}
         height={100}
