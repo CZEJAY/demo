@@ -51,12 +51,12 @@ export function Header() {
               </nav>
             </div>
             <div className="hidden md:block">
-              <button className="px-4 py-1 text-sm font-medium border-white border-palette text-white hover:text-gray-300 transition-colors">
+              <Link href="/auth/signin" className="px-4 py-1 text-sm font-medium border-white border-palette text-white hover:text-gray-300 transition-colors">
                 {t('signIn')}
-              </button>
-              <button className="ml-4 px-4 py-1 text-sm font-medium text-white gradient-bg rounded-md transition-colors">
+              </Link>
+              <Link href="/auth/signup" className="ml-4 px-4 py-1 text-sm font-medium text-white gradient-bg rounded-md transition-colors">
                 {t('getStarted')}
-              </button>
+              </Link>
             </div>
             <div className="md:hidden">
               <button className="text-white" onClick={() => setIsMobileNavOpen(true)}>

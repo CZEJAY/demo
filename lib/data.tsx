@@ -145,7 +145,7 @@ export const whatWillYouCreate = [
   },
   {
     label: "Websites",
-    content: "Improve your website with great design and copy to enhance user experience and increase conversions.",
+    content: "Create a website with great design and compelling copy to enhance user experience and increase conversions.",
     src: "website",
   },
   {
