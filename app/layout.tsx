@@ -26,9 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased ${postGroteskFont.className}`}>
         <LanguageProvider>
-          <Header />
           {children}
-          <Footer />
         </LanguageProvider>
       </body>
     </html>
