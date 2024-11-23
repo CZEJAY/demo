@@ -19,7 +19,7 @@ export function PatexaHeader({ view, onViewChange }: PatexaHeaderProps) {
     <div className="flex flex-col gap-4 border-b pb-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Button className="gap-2">
+          <Button className="gap-2 gradient-bg">
             <Sparkles className="h-4 w-4" />
             Create new
           </Button>
