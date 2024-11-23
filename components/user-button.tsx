@@ -18,9 +18,9 @@ export function UserButton() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+        <Button variant="ghost" className="relative h-5 w-5 items-center justify-center flex rounded-full">
           <Avatar>
-            <AvatarImage src="/user-placeholder.jpeg" alt="User avatar" />
+            <AvatarImage src="/user-placeholder.png" className='' alt="User avatar" />
             <AvatarFallback>U</AvatarFallback>
           </Avatar>
         </Button>

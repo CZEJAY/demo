@@ -17,24 +17,26 @@ interface PatexaHeaderProps {
 export function PatexaHeader({ view, onViewChange }: PatexaHeaderProps) {
   return (
     <div className="flex flex-col gap-4 border-b pb-4">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-1">
         <div className="flex items-center gap-2">
           <Button className="gap-2 gradient-bg">
             <Sparkles className="h-4 w-4" />
             Create new
           </Button>
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline">New from blank</Button>
+            <DropdownMenuTrigger className="" asChild>
+              <Button className="" variant="outline">New from blank</Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
               <DropdownMenuItem>Blank patexa</DropdownMenuItem>
               <DropdownMenuItem>From template</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <Button variant="outline">Import</Button>
+          <Button variant="outline" className="hidden md:block">Import</Button>
         </div>
+        <div className="flex-1">
         <ViewToggle view={view} onViewChange={onViewChange} />
+        </div>
       </div>
       <PatexaFilters
         filters={[
