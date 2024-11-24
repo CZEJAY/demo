@@ -34,9 +34,7 @@ export function PatexaHeader({ view, onViewChange }: PatexaHeaderProps) {
           </DropdownMenu>
           <Button variant="outline" className="hidden md:block">Import</Button>
         </div>
-        <div className="flex-1">
         <ViewToggle view={view} onViewChange={onViewChange} />
-        </div>
       </div>
       <PatexaFilters
         filters={[

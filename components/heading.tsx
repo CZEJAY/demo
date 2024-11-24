@@ -9,7 +9,7 @@ export const Heading = ({ children, className, ...props }: HeadingProps) => {
   return (
     <h1
       className={cn(
-        "text-2xl sm:text-3xl text-pretty font-heading font-semibold tracking-tight text-zinc-800",
+        "text-2xl  text-pretty font-heading font-semibold tracking-tight text-zinc-800",
         className
       )}
       {...props}

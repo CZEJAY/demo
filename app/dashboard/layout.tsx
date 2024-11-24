@@ -13,7 +13,6 @@ export default async function DashboardLayout({ children }: { children: React.Re
     <SidebarProvider className="w-full" defaultOpen={defaultOpen}>
       <AppSidebar />
       <main className="w-full">
-        <Navbar/>
         {children}
         <ModalProvider />
       </main>

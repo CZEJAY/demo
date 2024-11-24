@@ -6,8 +6,9 @@ import { MaxWidthWrapper } from '@/components/max-width-wrapper'
 import { SidebarTrigger } from '@/components/ui/sidebar'
 import { useModal } from "@/store/modalStore"
 import { UserButton } from '@/components/user-button'
+import { PropsWithChildren } from 'react'
 
-export function Navbar() {
+export function Navbar({children}:{} & PropsWithChildren) {
   const { onOpen } = useModal()
 
   return (

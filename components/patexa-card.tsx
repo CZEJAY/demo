@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { MoreHorizontal, Lock } from 'lucide-react'
 import { formatDistanceToNow } from "date-fns"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 
 interface PatexaCardProps {
   title: string
@@ -26,7 +27,8 @@ export function PatexaCard({
   className,
 }: PatexaCardProps) {
   return (
-    <Card className={cn("group relative overflow-hidden", className)}>
+    <Link href={`/doc/${encodeURIComponent(title)}`}>
+      <Card className={cn("group relative overflow-hidden", className)}>
       <div className="relative aspect-[16/10] overflow-hidden bg-muted">
         <img
           src={thumbnail}
@@ -69,6 +71,7 @@ export function PatexaCard({
         </div>
       </CardContent>
     </Card>
+    </Link>
   )
 }
 
