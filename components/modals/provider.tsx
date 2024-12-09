@@ -1,19 +1,20 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { AccountSettingsModal } from "./account-settings-modal"
-import { DeleteAccountModal } from "./delete-account-modal"
-import { CreditsModal } from "./credits-modal"
+import { useEffect, useState } from "react";
+import { AccountSettingsModal } from "./account-settings-modal";
+import { DeleteAccountModal } from "./delete-account-modal";
+import { CreditsModal } from "./credits-modal";
+import { FolderModal } from "./folder-modal";
 
 export function ModalProvider() {
-  const [isMounted, setIsMounted] = useState(false)
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true)
-  }, [])
+    setIsMounted(true);
+  }, []);
 
   if (!isMounted) {
-    return null
+    return null;
   }
 
   return (
@@ -21,7 +22,7 @@ export function ModalProvider() {
       <AccountSettingsModal />
       <DeleteAccountModal />
       <CreditsModal />
+      <FolderModal />
     </>
-  )
+  );
 }
-

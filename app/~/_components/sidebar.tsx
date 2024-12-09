@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { usePathname } from "next/navigation";
 import {
   Search,
   Plus,
@@ -34,9 +35,12 @@ import {
 import { cn } from "@/lib/utils";
 import { CommandDialog } from "@/components/command-dialog";
 import { WorkspaceSwitcher } from "@/components/workspace-switcher";
+import { useModal } from "@/store/modalStore";
 
 export function AppSidebar({ className }: { className?: string }) {
   const [open, setOpen] = React.useState(false);
+  const { onOpen } = useModal();
+  const pathname = usePathname();
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -49,6 +53,8 @@ export function AppSidebar({ className }: { className?: string }) {
     return () => document.removeEventListener("keydown", down);
   }, []);
 
+  const isActive = (href: string) => pathname === href;
+
   return (
     <>
       <Sidebar
@@ -56,7 +62,7 @@ export function AppSidebar({ className }: { className?: string }) {
         className={cn("bg-[#F7F5FF] border-r-0", className)}
       >
         <SidebarHeader className="p-4">
-            <WorkspaceSwitcher />
+          <WorkspaceSwitcher />
           <div className="relative group-data-[collapsible=icon]:hidden">
             <Search className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <Input
@@ -73,16 +79,19 @@ export function AppSidebar({ className }: { className?: string }) {
         <SidebarContent className="p-2">
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive>
-                <a href="#" className="flex items-center">
+              <SidebarMenuButton asChild isActive={isActive("/~")}>
+                <a href="/~" className="flex items-center">
                   <Home className="h-4 w-4" />
                   <SidebarSpan>Patexa</SidebarSpan>
                 </a>
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#">
+              <SidebarMenuButton
+                asChild
+                isActive={isActive("/~/~shared-with-you")}
+              >
+                <a href="/~/~shared-with-you">
                   <Users className="h-4 w-4" />
                   <span className="group-data-[collapsible=icon]:hidden">
                     Shared with you
@@ -91,8 +100,11 @@ export function AppSidebar({ className }: { className?: string }) {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#" className="flex items-center justify-between">
+              <SidebarMenuButton asChild isActive={isActive("/~sites")}>
+                <a
+                  href="/~/~sites"
+                  className="flex items-center justify-between"
+                >
                   <div className="flex items-center">
                     <Globe className="h-4 w-4" />
                     <span className="group-data-[collapsible=icon]:hidden ml-3">
@@ -106,8 +118,11 @@ export function AppSidebar({ className }: { className?: string }) {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#" className="flex items-center justify-between">
+              <SidebarMenuButton asChild isActive={isActive("/~ai-images")}>
+                <a
+                  href="/~/~ai-images"
+                  className="flex items-center justify-between"
+                >
                   <div className="flex items-center">
                     <Sparkles className="h-4 w-4" />
                     <span className="group-data-[collapsible=icon]:hidden ml-3">
@@ -128,17 +143,23 @@ export function AppSidebar({ className }: { className?: string }) {
           <SidebarGroup className="mt-4 group-data-[collapsible=icon]:hidden bg-gray-100">
             <SidebarGroupLabel className="flex items-center justify-between px-2">
               Folders
-              <Button variant="ghost" size="icon" className="h-4 w-4">
+              <Button
+                onClick={() => onOpen("folder")}
+                variant="ghost"
+                size="icon"
+                className="h-4 w-4"
+              >
                 <Plus className="h-3 w-3" />
               </Button>
             </SidebarGroupLabel>
             <div className="px-2 py-1.5">
               <p className="text-xs text-muted-foreground">
-                Organize your gammas by topic and share them with your team
+                Organize your patexas by topic and share them with your team
               </p>
               <Button
                 variant="link"
                 className="h-auto p-0 text-xs text-primary"
+                onClick={() => onOpen("folder")}
               >
                 Create or join a folder
               </Button>
@@ -147,8 +168,8 @@ export function AppSidebar({ className }: { className?: string }) {
 
           <SidebarMenu className="mt-4">
             <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#">
+              <SidebarMenuButton asChild isActive={isActive("/~templates")}>
+                <a href="/~/~templates">
                   <Layout className="h-4 w-4" />
                   <span className="group-data-[collapsible=icon]:hidden">
                     Templates
@@ -157,32 +178,32 @@ export function AppSidebar({ className }: { className?: string }) {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#">
+              <SidebarMenuButton asChild isActive={isActive("/~inspiration")}>
+                <a href="/~/~inspiration">
                   <Sparkles className="h-4 w-4" />
                   <SidebarSpan>Inspiration</SidebarSpan>
                 </a>
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#" className="text-primary">
+              <SidebarMenuButton asChild isActive={isActive("/~themes")}>
+                <a href="/~/~themes" className="text-primary">
                   <Palette className="h-4 w-4" />
                   <SidebarSpan>Themes</SidebarSpan>
                 </a>
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#">
+              <SidebarMenuButton asChild isActive={isActive("/~custom-fonts")}>
+                <a href="/~/~custom-fonts">
                   <Type className="h-4 w-4" />
                   <SidebarSpan>Custom fonts</SidebarSpan>
                 </a>
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#">
+              <SidebarMenuButton asChild isActive={isActive("/~trash")}>
+                <a href="/~/~trash">
                   <Trash className="h-4 w-4" />
                   <SidebarSpan>Trash</SidebarSpan>
                 </a>
@@ -192,24 +213,24 @@ export function AppSidebar({ className }: { className?: string }) {
 
           <SidebarMenu className="mt-4">
             <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#">
+              <SidebarMenuButton asChild isActive={isActive("/~settings")}>
+                <a href="/~/~settings">
                   <Settings className="h-4 w-4" />
                   <SidebarSpan>Settings & members</SidebarSpan>
                 </a>
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#">
+              <SidebarMenuButton asChild isActive={isActive("/~support")}>
+                <a href="/~/~support">
                   <HelpCircle className="h-4 w-4" />
                   <SidebarSpan>Contact support</SidebarSpan>
                 </a>
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild>
-                <a href="#">
+              <SidebarMenuButton asChild isActive={isActive("/~feedback")}>
+                <a href="/~/~feedback">
                   <Share2 className="h-4 w-4" />
                   <SidebarSpan>Share feedback</SidebarSpan>
                 </a>
