@@ -70,7 +70,7 @@ export function WorkspaceDefaultsTab({
             </div>
             <Select
               value={settings.externalAccess}
-              onValueChange={(value: any) =>
+              onValueChange={(value: AccessLevel) =>
                 updateSettings({ externalAccess: value })
               }
             >
