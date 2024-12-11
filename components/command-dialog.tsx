@@ -30,14 +30,14 @@ const recentItems: RecentItem[] = [
     id: "1",
     title: "Introduction to JavaScript Classes",
     thumbnail: "/assets/intro.jpeg?height=100&width=160",
-    creator: "Caleb Jimmy",
+    creator: "John Doe",
     editedAt: "Oct 1, 2024, 11:05 PM",
   },
   {
     id: "2",
     title: "Gamma Tips & Tricks",
     thumbnail: "/assets/tips.jpeg?height=100&width=160",
-    creator: "Caleb Jimmy",
+    creator: "John Doe",
     editedAt: "Oct 1, 2024, 10:56 PM",
   },
 ];

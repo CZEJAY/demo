@@ -1,4 +1,5 @@
 import { CardOption, StyleOption, ExamplePrompt } from "@/types/generate";
+import { WorkspaceMember } from "@/types/settings";
 
 export const CARD_OPTIONS: CardOption[] = [
   { value: 1, label: "1 card" },
@@ -149,5 +150,15 @@ export const EXAMPLE_PROMPTS: ExamplePrompt[] = [
       "Statement of work for a building contractor working on Willie Wonka's factory",
     icon: "🏭",
     type: "document",
+  },
+];
+
+export const defaultMembers: WorkspaceMember[] = [
+  {
+    id: "you",
+    name: "John Doe",
+    email: "johndoe@example.com",
+    role: "admin",
+    joinedAt: new Date("2024-10-01T22:56:00"),
   },
 ];

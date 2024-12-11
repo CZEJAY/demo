@@ -1,31 +1,36 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useModal } from "@/store/modalStore"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Coins, Users, ChevronDown, X } from 'lucide-react'
+import { useState } from "react";
+import { useModal } from "@/store/modalStore";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Coins, Users, ChevronDown, X } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
 
 export function CreditsModal() {
-  const { isOpen, type, view, onClose, onChangeView } = useModal()
-  const isModalOpen = isOpen && type === "credits"
-  const [copied, setCopied] = useState(false)
+  const { isOpen, type, view, onClose, onChangeView } = useModal();
+  const isModalOpen = isOpen && type === "credits";
+  const [copied, setCopied] = useState(false);
 
   const handleCopy = (text: string) => {
-    navigator.clipboard.writeText(text)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
-  const referralLink = "https://patexa.app/signup?r=wiqsduefvbqu"
-  const workspaceLink = "https://patexa.app/workspaces/gdrou"
+  const referralLink = "https://patexa.app/signup?r=wiqsduefvbqu";
+  const workspaceLink = "https://patexa.app/workspaces/gdrou";
 
   return (
     <Dialog open={isModalOpen} onOpenChange={onClose}>
@@ -33,30 +38,34 @@ export function CreditsModal() {
         <DialogHeader className="text-center">
           <DialogTitle>Your account balance</DialogTitle>
         </DialogHeader>
-        
+
         <div className="flex flex-col items-center gap-2 py-4">
           <Coins className="h-6 w-6" />
           <h2 className="text-2xl font-semibold">360 Credits</h2>
           <p className="text-center text-sm text-muted-foreground">
-            Credits let you create and edit with AI. Each user in your workspace gets their own credits.
+            Credits let you create and edit with AI. Each user in your workspace
+            gets their own credits.
           </p>
         </div>
 
         {view === "main" && (
           <>
             <div className="flex gap-2">
-              <Button className="flex-1 gradient-bg" onClick={() => onChangeView("refer")}>
+              <Button
+                className="flex-1 bg-primary"
+                onClick={() => onChangeView("refer")}
+              >
                 Get unlimited credits
               </Button>
-              <Button 
-                variant="secondary" 
+              <Button
+                variant="secondary"
                 className="flex-1 "
                 onClick={() => onChangeView("refer")}
               >
                 Refer a friend
               </Button>
-              <Button 
-                variant="secondary" 
+              <Button
+                variant="secondary"
                 className="flex-1"
                 onClick={() => onChangeView("invite")}
               >
@@ -81,16 +90,16 @@ export function CreditsModal() {
         {view === "refer" && (
           <div className="space-y-4">
             <div className="flex gap-2">
-              <Button 
-                variant="secondary" 
+              <Button
+                variant="secondary"
                 className="flex-1"
                 onClick={() => onChangeView("main")}
               >
                 Get unlimited credits
               </Button>
               <Button className="flex-1">Refer a friend</Button>
-              <Button 
-                variant="secondary" 
+              <Button
+                variant="secondary"
                 className="flex-1"
                 onClick={() => onChangeView("invite")}
               >
@@ -99,16 +108,13 @@ export function CreditsModal() {
             </div>
 
             <p className="text-sm text-muted-foreground">
-              Give 200 credits and earn 200 credits for each new referral who signs up for Gamma.
+              Give 200 credits and earn 200 credits for each new referral who
+              signs up for Gamma.
             </p>
 
             <div className="flex items-center gap-2">
-              <Input 
-                readOnly 
-                value={referralLink}
-                className="bg-muted"
-              />
-              <Button 
+              <Input readOnly value={referralLink} className="bg-muted" />
+              <Button
                 className="whitespace-nowrap"
                 onClick={() => handleCopy(referralLink)}
               >
@@ -125,15 +131,15 @@ export function CreditsModal() {
         {view === "invite" && (
           <div className="space-y-4">
             <div className="flex gap-2">
-              <Button 
-                variant="secondary" 
+              <Button
+                variant="secondary"
                 className="flex-1"
                 onClick={() => onChangeView("main")}
               >
                 Get unlimited credits
               </Button>
-              <Button 
-                variant="secondary" 
+              <Button
+                variant="secondary"
                 className="flex-1"
                 onClick={() => onChangeView("refer")}
               >
@@ -145,16 +151,13 @@ export function CreditsModal() {
             </div>
 
             <p className="text-sm text-muted-foreground">
-              Give 200 credits and earn 200 credits for each new referral who signs up and joins your workspace.
+              Give 200 credits and earn 200 credits for each new referral who
+              signs up and joins your workspace.
             </p>
 
             <div className="flex items-center gap-2">
-              <Input 
-                readOnly 
-                value={workspaceLink}
-                className="bg-muted"
-              />
-              <Button 
+              <Input readOnly value={workspaceLink} className="bg-muted" />
+              <Button
                 className="whitespace-nowrap"
                 onClick={() => handleCopy(workspaceLink)}
               >
@@ -182,12 +185,12 @@ export function CreditsModal() {
               How can I earn more credits?
             </AccordionTrigger>
             <AccordionContent className="text-sm text-muted-foreground">
-              You can earn credits by referring friends or inviting teammates to your workspace.
+              You can earn credits by referring friends or inviting teammates to
+              your workspace.
             </AccordionContent>
           </AccordionItem>
         </Accordion>
       </DialogContent>
     </Dialog>
-  )
+  );
 }
-

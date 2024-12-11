@@ -57,7 +57,7 @@ export default function CreatePage() {
           title="Paste in text"
           description="Create from notes, an outline, or existing content"
           icon={<PasteIcon />}
-          className="bg-pink-50/50"
+          className=""
         />
         <CreateCard
           href="/create/generate"
@@ -65,14 +65,14 @@ export default function CreatePage() {
           description="Create from a one-line prompt in a few seconds"
           icon={<GenerateIcon />}
           badge="Popular"
-          className="bg-purple-50/50"
+          className=""
         />
         <CreateCard
           href="/create/import"
           title="Import file or URL"
           description="Enhance existing docs, presentations, or webpages"
           icon={<ImportIcon />}
-          className="bg-purple-50/50"
+          className=""
         />
       </div>
 

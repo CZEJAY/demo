@@ -1,23 +1,30 @@
-"use client"
+"use client";
 
-import { useModal } from "@/store/modalStore"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Switch } from "@/components/ui/switch"
+import { useModal } from "@/store/modalStore";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+} from "@/components/ui/select";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useWorkspaceSettings } from "@/hooks/use-workspace-settings";
 
 export function AccountSettingsModal() {
-  const { isOpen, type, onClose } = useModal()
-  const isModalOpen = isOpen && type === "account-settings"
+  const { isOpen, type, onClose } = useModal();
+  const isModalOpen = isOpen && type === "account-settings";
+  const { settings } = useWorkspaceSettings();
 
   return (
     <Dialog open={isModalOpen} onOpenChange={onClose}>
@@ -31,17 +38,17 @@ export function AccountSettingsModal() {
             <AvatarFallback>CJ</AvatarFallback>
           </Avatar>
           <span className="text-sm text-muted-foreground">
-            calebjimmy67@gmail.com
+            {settings.email}
           </span>
         </div>
         <div className="grid gap-4">
           <div className="grid gap-2">
             <Label htmlFor="firstName">First name</Label>
-            <Input id="firstName" defaultValue="Caleb" />
+            <Input id="firstName" defaultValue={settings.name.split(" ")[0]} />
           </div>
           <div className="grid gap-2">
             <Label htmlFor="lastName">Last name</Label>
-            <Input id="lastName" defaultValue="Jimmy" />
+            <Input id="lastName" defaultValue={settings.name.split(" ")[1]} />
           </div>
           <div className="grid gap-2">
             <Label htmlFor="language">Language</Label>
@@ -58,9 +65,13 @@ export function AccountSettingsModal() {
           </div>
           <div className="grid gap-4">
             <div>
-              <h3 className="mb-4 text-sm font-medium">Emails and notifications</h3>
+              <h3 className="mb-4 text-sm font-medium">
+                Emails and notifications
+              </h3>
               <p className="text-sm text-muted-foreground">
-                Choose which emails you want to receive from us. Note that you will still receive important notifications related to your account.
+                Choose which emails you want to receive from us. Note that you
+                will still receive important notifications related to your
+                account.
               </p>
             </div>
             <div className="grid gap-4">
@@ -69,7 +80,9 @@ export function AccountSettingsModal() {
                 <Switch id="onboarding" defaultChecked />
               </div>
               <div className="flex items-center justify-between">
-                <Label htmlFor="updates">Product updates and announcements</Label>
+                <Label htmlFor="updates">
+                  Product updates and announcements
+                </Label>
                 <Switch id="updates" defaultChecked />
               </div>
             </div>
@@ -79,8 +92,8 @@ export function AccountSettingsModal() {
               variant="ghost"
               className="text-red-600 hover:text-red-600 hover:bg-red-100"
               onClick={() => {
-                onClose()
-                useModal.getState().onOpen("delete-account")
+                onClose();
+                useModal.getState().onOpen("delete-account");
               }}
             >
               Delete my account
@@ -90,6 +103,5 @@ export function AccountSettingsModal() {
         </div>
       </DialogContent>
     </Dialog>
-  )
+  );
 }
-

@@ -34,8 +34,9 @@ export const DashboardPage = ({
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
               <SidebarTrigger />
-              <span className="text-xl font-bold">{title}</span>
-
+              <span className=" font-semibold text-muted-foreground">
+                {title}
+              </span>
             </div>
             <div className="flex items-center gap-4">
               <span

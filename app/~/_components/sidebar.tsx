@@ -100,7 +100,7 @@ export function AppSidebar({ className }: { className?: string }) {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive={isActive("/~sites")}>
+              <SidebarMenuButton asChild isActive={isActive("/~/~sites")}>
                 <a
                   href="/~/~sites"
                   className="flex items-center justify-between"
@@ -118,7 +118,7 @@ export function AppSidebar({ className }: { className?: string }) {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive={isActive("/~ai-images")}>
+              <SidebarMenuButton asChild isActive={isActive("/~/~ai-images")}>
                 <a
                   href="/~/~ai-images"
                   className="flex items-center justify-between"
@@ -152,7 +152,7 @@ export function AppSidebar({ className }: { className?: string }) {
                 <Plus className="h-3 w-3" />
               </Button>
             </SidebarGroupLabel>
-            <div className="px-2 py-1.5">
+            <div className="px-2 py-1.5 text-center">
               <p className="text-xs text-muted-foreground">
                 Organize your patexas by topic and share them with your team
               </p>
@@ -168,7 +168,7 @@ export function AppSidebar({ className }: { className?: string }) {
 
           <SidebarMenu className="mt-4">
             <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive={isActive("/~templates")}>
+              <SidebarMenuButton asChild isActive={isActive("/~/~templates")}>
                 <a href="/~/~templates">
                   <Layout className="h-4 w-4" />
                   <span className="group-data-[collapsible=icon]:hidden">
@@ -178,7 +178,7 @@ export function AppSidebar({ className }: { className?: string }) {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive={isActive("/~inspiration")}>
+              <SidebarMenuButton asChild isActive={isActive("/~/~inspiration")}>
                 <a href="/~/~inspiration">
                   <Sparkles className="h-4 w-4" />
                   <SidebarSpan>Inspiration</SidebarSpan>
@@ -186,15 +186,18 @@ export function AppSidebar({ className }: { className?: string }) {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive={isActive("/~themes")}>
-                <a href="/~/~themes" className="text-primary">
+              <SidebarMenuButton asChild isActive={isActive("/~/~themes")}>
+                <a href="/~/~themes" className="">
                   <Palette className="h-4 w-4" />
                   <SidebarSpan>Themes</SidebarSpan>
                 </a>
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive={isActive("/~custom-fonts")}>
+              <SidebarMenuButton
+                asChild
+                isActive={isActive("/~/~custom-fonts")}
+              >
                 <a href="/~/~custom-fonts">
                   <Type className="h-4 w-4" />
                   <SidebarSpan>Custom fonts</SidebarSpan>
@@ -202,7 +205,7 @@ export function AppSidebar({ className }: { className?: string }) {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive={isActive("/~trash")}>
+              <SidebarMenuButton asChild isActive={isActive("/~/~trash")}>
                 <a href="/~/~trash">
                   <Trash className="h-4 w-4" />
                   <SidebarSpan>Trash</SidebarSpan>
@@ -213,7 +216,7 @@ export function AppSidebar({ className }: { className?: string }) {
 
           <SidebarMenu className="mt-4">
             <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive={isActive("/~settings")}>
+              <SidebarMenuButton asChild isActive={isActive("/~/~settings")}>
                 <a href="/~/~settings">
                   <Settings className="h-4 w-4" />
                   <SidebarSpan>Settings & members</SidebarSpan>
@@ -221,7 +224,7 @@ export function AppSidebar({ className }: { className?: string }) {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive={isActive("/~support")}>
+              <SidebarMenuButton asChild isActive={isActive("/~/~support")}>
                 <a href="/~/~support">
                   <HelpCircle className="h-4 w-4" />
                   <SidebarSpan>Contact support</SidebarSpan>
@@ -229,7 +232,7 @@ export function AppSidebar({ className }: { className?: string }) {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild isActive={isActive("/~feedback")}>
+              <SidebarMenuButton asChild isActive={isActive("/~/~feedback")}>
                 <a href="/~/~feedback">
                   <Share2 className="h-4 w-4" />
                   <SidebarSpan>Share feedback</SidebarSpan>

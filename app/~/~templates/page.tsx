@@ -1,6 +1,7 @@
 import React from "react";
 import { DashboardPage } from "../_components/dashboard-page";
 import { Metadata } from "next";
+import TemplatesPage from "./_components/main-page";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const title = "Templates";
@@ -33,12 +34,12 @@ export const generateMetadata = async (): Promise<Metadata> => {
   };
 };
 
-const TemplatesPage = () => {
+const Templates = () => {
   return (
     <DashboardPage title="Templates">
-      {/* Add your templates content here */}
+      <TemplatesPage />
     </DashboardPage>
   );
 };
 
-export default TemplatesPage;
+export default Templates;

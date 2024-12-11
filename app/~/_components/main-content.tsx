@@ -12,7 +12,7 @@ const patexas = [
     title: "Introduction to JavaScript Classes",
     isPrivate: true,
     creator: {
-      name: "Caleb Jimmy",
+      name: "John Doe",
       avatar: "/user-placeholder.png?height=32&width=32",
     },
     thumbnail: "/assets/intro.jpeg?height=200&width=320&text=JS",
@@ -23,7 +23,7 @@ const patexas = [
     title: "Gamma Tips & Tricks",
     isPrivate: true,
     creator: {
-      name: "Caleb Jimmy",
+      name: "John Doe",
       avatar: "/user-placeholder.png?height=32&width=32",
     },
     thumbnail: "/assets/tips.jpeg?height=200&width=320&text=Tips",

@@ -25,7 +25,7 @@ export function CreateCard({
       href={href}
       className={cn(
         "group relative overflow-hidden rounded-xl p-6 transition-all duration-300",
-        "bg-white/50 backdrop-blur-sm",
+        "bg-white backdrop-blur-sm",
         "hover:bg-white/80 hover:shadow-[0_8px_16px_rgb(0_0_0/0.08)] hover:-translate-y-1",
         className
       )}
@@ -38,7 +38,7 @@ export function CreateCard({
             {badge && (
               <Badge
                 variant="new"
-                className="rounded-full bg-purple-100 text-purple-700 px-3"
+                className="rounded-full bg-primary text-white px-3"
               >
                 {badge}
               </Badge>
