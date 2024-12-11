@@ -1,4 +1,4 @@
-import { WorkspaceSettings } from "@/types/settings";
+import { AccessLevel, WorkspaceSettings } from "@/types/settings";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Label } from "@/components/ui/label";
 import {
@@ -44,7 +44,7 @@ export function WorkspaceDefaultsTab({
             </div>
             <Select
               value={settings.memberAccess}
-              onValueChange={(value: any) =>
+              onValueChange={(value: AccessLevel) =>
                 updateSettings({ memberAccess: value })
               }
             >
