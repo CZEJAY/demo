@@ -2,7 +2,7 @@
 
 import { Plus, Shuffle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { EXAMPLE_PROMPTS } from "@/lib/constants";
+import { EXAMPLE_PROMPTS } from "@/lib/constants-dash";
 import { ContentType, ExamplePrompt } from "@/types/generate";
 import { cn } from "@/lib/utils";
 

@@ -8,7 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { CARD_OPTIONS, STYLE_OPTIONS } from "@/lib/constants";
+import { CARD_OPTIONS, STYLE_OPTIONS } from "@/lib/constants-dash";
 import { cn } from "@/lib/utils";
 
 interface SettingsDropdownsProps {

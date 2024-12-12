@@ -7,7 +7,7 @@ import { OverviewTab } from "./overviewtab";
 import { MemberList } from "./member-list";
 import { WorkspaceDefaultsTab } from "./workspace-defaults-tabs";
 import { useWorkspaceSettings } from "@/hooks/use-workspace-settings";
-import { defaultMembers } from "@/lib/constants";
+import { defaultMembers } from "@/lib/constants-dash";
 import { Link2, Mail } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { WorkspaceMember, WorkspaceRole } from "@/types/settings";

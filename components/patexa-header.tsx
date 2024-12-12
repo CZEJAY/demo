@@ -29,17 +29,13 @@ export function PatexaHeader({ view, onViewChange }: PatexaHeaderProps) {
             <Sparkles className="h-4 w-4" />
             Create new
           </Button>
-          <DropdownMenu>
-            <DropdownMenuTrigger className="" asChild>
-              <Button className="" variant="outline">
-                New from blank
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
-              <DropdownMenuItem>Blank patexa</DropdownMenuItem>
-              <DropdownMenuItem>From template</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Button
+            onClick={() => router.push("/doc")}
+            className=""
+            variant="outline"
+          >
+            New from blank
+          </Button>
           <Button variant="outline" className="hidden md:block">
             Import
           </Button>
