@@ -1,6 +1,7 @@
 import React from "react";
 import { DashboardPage } from "../_components/dashboard-page";
 import { Metadata } from "next";
+import TrashMainPage from "./_components/main-page";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const title = "Trash";
@@ -36,7 +37,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
 const TrashPage = () => {
   return (
     <DashboardPage title="Trash">
-      {/* Add your templates content here */}
+      <TrashMainPage />
     </DashboardPage>
   );
 };

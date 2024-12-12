@@ -1,6 +1,7 @@
 import React from "react";
 import { DashboardPage } from "../_components/dashboard-page";
 import { Metadata } from "next";
+import CustomFonts from "./_components/main-page";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const title = "Custom Fonts";
@@ -36,7 +37,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
 const CustomFontsPage = () => {
   return (
     <DashboardPage title="Custom Fonts">
-      {/* Add your templates content here */}
+      <CustomFonts />
     </DashboardPage>
   );
 };

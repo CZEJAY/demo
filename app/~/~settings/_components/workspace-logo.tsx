@@ -34,7 +34,7 @@ export function WorkspaceLogo({
       <Tooltip>
         <TooltipTrigger asChild>
           <div
-            className="group relative h-24 w-24 cursor-pointer overflow-hidden rounded-full bg-gradient-to-br from-primary to-primary/85 transition-all hover:shadow-lg"
+            className="group relative h-24 w-24 cursor-pointer overflow-hidden rounded-full gradient-bg transition-all hover:shadow-lg"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => document.getElementById("logo-upload")?.click()}
