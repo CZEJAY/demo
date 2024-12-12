@@ -20,15 +20,17 @@ export default function SharedPageMain() {
   return (
     <DashboardPage title="Shared with you">
       <div className="space-y-4 mt-10">
-        <Filters
-          filter={filter}
-          sort={sort}
-          view={view}
-          onFilterChange={setFilter}
-          onSortChange={setSort}
-          onViewChange={setView}
-          itemCount={items.length}
-        />
+        <div className="overflow-x-auto">
+          <Filters
+            filter={filter}
+            sort={sort}
+            view={view}
+            onFilterChange={setFilter}
+            onSortChange={setSort}
+            onViewChange={setView}
+            itemCount={items.length}
+          />
+        </div>
         {isLoading ? (
           <div className="space-y-4">
             <div className="h-[200px] rounded-lg bg-muted animate-pulse" />

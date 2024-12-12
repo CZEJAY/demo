@@ -75,7 +75,7 @@ export function GenerateImageSidebar({
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent className="w-[600px] ">
+      <SheetContent className="w-[400px] md:w-[600px] ">
         <SheetHeader className="flex flex-row items-center justify-between">
           <SheetTitle>AI images</SheetTitle>
         </SheetHeader>
