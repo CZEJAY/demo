@@ -1,5 +1,6 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript"],
+  "plugins": ["prettier"],
   "rules": {
     "@next/next/no-img-element": "off",
     "react/jsx-no-target-blank": "off",
