@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import "./editor.css";
+@import './editor.css';
 
 @layer base {
   body {
@@ -50,7 +50,7 @@ textarea::-moz-placeholder {
   @apply bg-neutral-500/50 rounded-full;
 }
 
-input[type="range"] {
+input[type='range'] {
   @apply h-2.5 bg-neutral-200 border-0 rounded appearance-none active:bg-neutral-300 transition-all;
   @apply dark:bg-neutral-700 dark:active:bg-neutral-600;
 
@@ -141,14 +141,14 @@ input[type="range"] {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 221 42% 16%;
+    --sidebar-foreground: 0 0% 100%; /* white */
+    --sidebar-primary: 221 42% 12%;
+    --sidebar-primary-foreground: 0 0% 100%; /* white */
+    --sidebar-accent: 222 15% 31%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 221 42% 75%;
+    --sidebar-ring: 221 42% 45%;
   }
 
   .dark {

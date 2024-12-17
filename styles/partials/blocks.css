@@ -42,7 +42,7 @@
   }
 
   [data-type='column'] {
-    @apply overflow-auto;
+    @apply overflow-auto border-2 border-red-600;
   }
 
   /* Details */

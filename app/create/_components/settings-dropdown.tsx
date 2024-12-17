@@ -1,23 +1,17 @@
-"use client";
+'use client'
 
-import { Badge } from "@/components/ui/badge";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { CARD_OPTIONS, STYLE_OPTIONS } from "@/lib/constants-dash";
-import { cn } from "@/lib/utils";
+import { Badge } from '@/components/ui/badge'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { CARD_OPTIONS, STYLE_OPTIONS } from '@/lib/constants-dash'
+import { cn } from '@/lib/utils'
 
 interface SettingsDropdownsProps {
-  cards: number;
-  style: string;
-  language: string;
-  onCardsChange: (value: string) => void;
-  onStyleChange: (value: string) => void;
-  onLanguageChange: (value: string) => void;
+  cards: number
+  style: string
+  language: string
+  onCardsChange: (value: string) => void
+  onStyleChange: (value: string) => void
+  onLanguageChange: (value: string) => void
 }
 
 export function SettingsDropdowns({
@@ -35,7 +29,7 @@ export function SettingsDropdowns({
           <SelectValue>
             <span className="flex items-center gap-2">
               {cards} cards
-              {CARD_OPTIONS.find((opt) => opt.value === cards)?.isPro && (
+              {CARD_OPTIONS.find(opt => opt.value === cards)?.isPro && (
                 <Badge variant="new" className="bg-purple-100 text-purple-700">
                   PRO
                 </Badge>
@@ -44,10 +38,8 @@ export function SettingsDropdowns({
           </SelectValue>
         </SelectTrigger>
         <SelectContent>
-          <div className="text-xs text-muted-foreground px-2 py-1">
-            Tip: cards are like slides
-          </div>
-          {CARD_OPTIONS.map((option) => (
+          <div className="text-xs text-muted-foreground px-2 py-1">Tip: cards are like slides</div>
+          {CARD_OPTIONS.map(option => (
             <SelectItem
               key={option.value}
               value={option.value.toString()}
@@ -55,7 +47,7 @@ export function SettingsDropdowns({
             >
               <span>{option.label}</span>
               {option.isPro && (
-                <Badge variant="new" className="bg-purple-100 text-purple-700">
+                <Badge variant="new" className=" gradient-bg text-white ml-2">
                   PRO
                 </Badge>
               )}
@@ -70,12 +62,8 @@ export function SettingsDropdowns({
         </SelectTrigger>
         <SelectContent>
           <div className="grid gap-2">
-            {STYLE_OPTIONS.map((option) => (
-              <SelectItem
-                key={option.value}
-                value={option.value}
-                className="flex flex-col items-start"
-              >
+            {STYLE_OPTIONS.map(option => (
+              <SelectItem key={option.value} value={option.value} className="flex flex-col items-start">
                 <div className="flex items-center gap-2">
                   <span>{option.label}</span>
                   {option.fluid && (
@@ -84,9 +72,7 @@ export function SettingsDropdowns({
                     </Badge>
                   )}
                 </div>
-                <span className="text-xs text-muted-foreground">
-                  {option.description}
-                </span>
+                {/* <span className="text-xs text-muted-foreground">{option.description}</span> */}
               </SelectItem>
             ))}
           </div>
@@ -105,5 +91,5 @@ export function SettingsDropdowns({
         </SelectContent>
       </Select>
     </div>
-  );
+  )
 }
